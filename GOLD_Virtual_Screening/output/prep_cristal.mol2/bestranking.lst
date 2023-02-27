@@ -1,0 +1,8 @@
+# File containing a listing of the fitness of the top-ranked
+# individual for each ligand docked in GOLD.
+#
+# Format is:
+#
+#     Fitness  S(hb_ext) S(vdw_ext)  S(hb_int)    S(int)      intcor RMS(heavy)     time                               File name                Ligand name
+
+     43.26       0.00      31.81       0.00      -0.47       0.06    4.455   18.030  '/mnt/e/GOLD/Screening_2/output/prep_cristal.mol2/gold_soln_prep_cristal_m1_1.mol2'                     'F:ID'

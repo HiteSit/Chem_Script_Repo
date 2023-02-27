@@ -1,0 +1,1298 @@
+
+--------------------------------------------------------------------------------
+--- GOLD DOCKING RUN  (GOLD v2022.3.0)                                       ---
+--------------------------------------------------------------------------------
+
+GOLD is Genetic Optimisation for Ligand Docking.
+
+GOLD is the result of a collaborative project between Sheffield University,
+the CCDC and Glaxo Wellcome. GOLD is a proprietary product for which the
+copyright is held by the Cambridge Crystallographic Data Centre (CCDC)
+
+Please forward any comments, bugs, or queries to CCDC Software Support:
+
+  Cambridge Crystallographic Data Centre
+  12 Union Road
+  Cambridge CB2 1EZ
+  tel: (44) (1223) 336022
+  email: support@ccdc.cam.ac.uk
+
+--------------------------------------------------------------------------------
+
+  User                                     : hitesit
+  Invocation Time                          : Mon Feb 27 15:34:58 2023
+
+
+--------------------------------------------------------------------------------
+--- Parameter setting overview (user-defined or automatic)                   ---
+--------------------------------------------------------------------------------
+  maxops                          automatic setting
+  popsiz                          automatic setting
+  select_pressure                 automatic setting
+  n_islands                       automatic setting
+  niche_siz                       automatic setting
+  pt_crosswt                      automatic setting
+  allele_mutatewt                 automatic setting
+  migratewt                       automatic setting
+  start_vdw_linear_cutoff         defined by user
+  initial_virtual_pt_match_max    defined by user
+
+--------------------------------------------------------------------------------
+--- ChemScore parameters                                                     ---
+--------------------------------------------------------------------------------
+
+* ChemScore coefficients                                                        
+  ZERO_COEFFICIENT                         :  -5.480
+  HBOND_COEFFICIENT                        :  -3.340
+  INTERNAL_HBOND_COEFFICIENT               :  -3.340
+  METAL_COEFFICIENT                        :  -6.030
+  LIPO_COEFFICIENT                         :  -0.117
+  ROT_COEFFICIENT                          :   2.560
+  INTRA_COEFFICIENT                        :   1.000
+  LINK_BEND_COEFFICIENT                    :   0.250
+  PROTEIN_ENERGY_COEFFICIENT               :   1.000
+
+* Hydrogen-bond term                                                            
+  HBOND_FUNCTION                           : CHEMSCORE_DOCKING
+  R_IDEAL                                  :   1.850
+  DELTA_R_IDEAL                            :   0.250
+  DELTA_R_MAX                              :   0.650
+  HBOND_R_SIGMA                            :   0.100
+  ALPHA_IDEAL                              : 180.000
+  DELTA_ALPHA_IDEAL                        :  30.000
+  DELTA_ALPHA_MAX                          :  80.000
+  HBOND_ALPHA_SIGMA                        :  10.000
+  BETA_IDEAL                               : 180.000
+  DELTA_BETA_IDEAL                         :  70.000
+  DELTA_BETA_MAX                           :  80.000
+  HBOND_BETA_SIGMA                         :  10.000
+USE_HBOND_STRENGTHS = OFF
+
+  CH...O term                              : OFF
+
+Sulfur...acceptor term: 
+
+
+* Metal term                                                                    
+  METAL_R1                                 :   2.600
+  METAL_R2                                 :   3.000
+  METAL_R_SIGMA                            :   0.100
+
+* Specific metal-coordination types                                             
+
+
+* Lipophilic term                                                               
+  MAKE_PLANAR_N_LIPO                       :      0
+  LIPO_R1                                  :   4.100
+  LIPO_R2                                  :   7.100
+  LIPO_R_SIGMA                             :   0.100
+
+
+* Clash term                                                                    
+  CLASH_FUNCTION                           : CHEMSCORE_DOCKING
+  CLASH_RADIUS_GENERAL                     :   3.100
+  CLASH_RADIUS_SULPHUR                     :   3.350
+  CLASH_RADIUS_HBOND                       :   1.600
+  CLASH_RADIUS_METAL                       :   1.380
+  CLASH_RADIUS_SIGMA                       :   0.100
+
+
+* Torsion term                                                                  
+  SP3_SP3_BOND         A =  0.18750 (kJ/mol); n = 3.0; f0 =  3.14159 (rad)
+  SP3_SP2_BOND         A =  0.09375 (kJ/mol); n = 6.0; f0 =  0.00000 (rad)
+  SP2_SP2_BOND         A =  0.18750 (kJ/mol); n = 2.0; f0 =  0.00000 (rad)
+  UNKNOWN_BOND         A =  0.00000 (kJ/mol); n = 0.0; f0 =  0.00000 (rad)
+  EXOCYCLIC_BOND       A =  0.50000 (kJ/mol); n = 1.0; f0 =  3.14159 (rad)
+USE_EXOCYCLIC_TORSION_TERM = 1
+
+
+* Scaling                                                                       
+  HBOND_SCALING                            :      1
+  HBOND_SCALING_SAMPLES                    :      1
+  HBOND_SCALING_END                        :  75.000
+  DELTA_R_MAX_START                        :   1.150
+  DELTA_ALPHA_MAX_START (deg)              : 110.000
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+--- Parameter settings                                                       ---
+--------------------------------------------------------------------------------
+
+* Population settings                                                           
+  maxops                                   : auto   
+  popsiz                                   : auto   
+  select_pressure                          : auto   
+  n_islands                                : auto   
+  niche_siz                                : auto   
+
+* GA settings                                                                   
+  pt_crosswt                               : auto   
+  allele_mutatewt                          : auto   
+  migratewt                                : auto   
+
+* Search settings                                                               
+  start_vdw_linear_cutoff                  :   6.000
+  initial_virtual_pt_match_max             :   3.000
+
+* Cavity detection                                                              
+  Cavity detection algorithm               : Ligsite
+
+* Solvent Accessibility                                                         
+  Solvate all H bond donors and acceptors  : on
+
+* Ligand treatment                                                              
+  Internal ligand hydrogen bonds           : ignored
+  Flexible ligand ring corners             : fixed
+  Ligand carboxylic OH groups              : flip
+  Ligand amide bonds                       : fixed
+  Ligand pyramidal nitrogen groups         : fixed
+  Ligand bond to planar nitrogen groups    : allow 180 degrees flip
+  Ligand planar nitrogen bonds (Ring-NH-R) : can flip
+  Ligand planar nitrogen bonds (Ring-NRR') : can flip
+  Flatten amide and trigonal nitrogens     : yes
+  Torsional distributions                  : are used
+  Calculating torsional energy of ligand   : yes
+  Ligand energy                            : relative wrt best tors+vdw+hbond
+                                           : reported fitness is adjusted
+  Post-process ligand bonds                : yes
+
+* Protein treatment:                                                            
+  Protein carboxylic OH groups             : flip
+
+* Algorithm Settings (from parameter file):                                     
+  VDW potential (external)                 : 4-8       LJ potential (no. 1)
+  VDW potential (external)                 : 4-8 2-4 split potential (no. 2)
+  VDW potential (external)                 : 4-8 1-2 split potential (no. 3)
+  VDW potential (internal)                 : 6-12       LJ potential (no. 1)
+  VDW potential (internal)                 : 4-8       LJ potential (no. 2)
+  VDW potential (internal)                 : slot 3 not used
+  Weighting for distance matching          : squared
+  Weighting for angle    matching          : squared
+  Mapping, second pass results             : taking best three
+  Internal energy                          : on absolute scale
+  External energy weight                   :   1.375
+  Internal energy weight                   :   1.000
+  Length of H bond                         :   2.900
+  Angle coding                             : binary coded
+  Angle bit length                         : 8 bits
+  Allow duplicates in chromosome mappings  : yes
+  Parameter scaling                        : on
+  Simplex minimisation after every GA run  : yes
+  Infer hetatm types from residue names    : yes
+  Ligand relaxation                        : on
+    Maximum relax distance                 :   2.000
+    Maximum relax angle                    :  60.000
+  Ionisation dispersion term               : external
+
+* Geometric parameters for Fitness Function (from parameter file)               
+  Initial Virtual pt dist max              :   3.000
+  Final Virtual pt dist max                :   2.000
+  Virtual point distance min               :   0.500
+  Virtual point angle min                  :  60.000
+  Virtual point angle max                  : 160.000
+  Cone virtual point angle min             : 120.000
+  Cone virtual point angle max             : 160.000
+  Contact distance                         :  10.000
+  D/A vdw contact weighting                :   1.000
+  Minimum neighbour weighting              :   0.200
+  Mapping second pass distance             :   2.000
+
+* Lone pair parameters                                                          
+  Planar LP: minimum angle with plane      :  20.000
+  Planar LP: maximum angle with plane      :  90.000
+  Protein planar acceptors                 : need only one lp solvated
+  Solvated point distance                  :  -0.200
+
+* VDW parameters                                                                
+  Border round vdw grid                    :   4.000
+  VDW cutoff fraction                      :   1.500
+  VDW cutoff distance                      :  20.000
+  Number of bins in VDW lookup             :  10000
+
+* Specific metal-coordination types                                             
+
+* Other settings                                                                
+  Write statistics                         : off
+  Current parameters file                  :
+  /home/hitesit/CCDC/Discovery_2022/GOLD/gold/gold.params                       
+--------------------------------------------------------------------------------
+
+Processing protein 1: /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb 	DE(Protein): 0.00
+
+--------------------------------------------------------------------------------
+--- Loading protein                                                          ---
+--------------------------------------------------------------------------------
+  Protein file                             : /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb
+==================================
+APPLYING GOLD TEMPLATES TO PROTEIN
+==================================
+
+No templates identified from 
+
+==================================
+# WARNING: atom    1 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom    8 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom   19 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom   27 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom   36 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom   44 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom   52 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom   58 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom   59 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom   67 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom   82 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom   87 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom   95 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  102 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  106 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  120 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  125 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  129 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  137 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  146 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  152 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  159 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  163 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  171 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  177 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  182 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  187 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  192 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  197 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  202 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  203 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  211 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  219 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  223 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  239 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  244 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  252 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  259 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  263 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  270 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  278 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  285 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  291 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  292 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  299 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  306 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  317 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  321 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  329 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  334 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  342 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  347 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  355 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  360 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  361 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  365 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  370 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  371 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  377 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  378 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  394 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  400 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  405 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  414 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  422 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  427 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  428 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  436 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  441 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  442 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  447 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  448 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  456 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  460 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  467 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  474 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  478 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  484 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  485 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  490 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  496 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  504 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  512 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  519 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  524 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  525 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  532 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  534 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  535 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  540 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  541 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  546 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  553 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  555 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  556 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  567 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  578 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  587 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  598 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  606 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  612 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  613 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  619 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  628 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  636 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  641 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  649 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  653 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  662 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  670 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  677 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  681 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  689 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  697 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  705 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  712 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  716 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  727 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  745 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  753 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  762 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  767 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  768 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  778 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  782 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  791 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  799 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  803 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  812 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  820 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  824 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  828 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  835 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  842 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  853 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  861 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  870 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  878 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  886 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  892 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  893 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  901 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  916 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  921 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  929 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  936 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  940 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  954 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  959 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  963 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  971 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  980 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  986 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  993 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  997 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1005 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1011 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1016 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1021 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1026 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1031 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1036 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1037 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1045 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1053 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1057 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1073 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1078 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1086 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1093 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1097 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1104 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1112 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1119 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1125 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1126 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1133 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1140 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1151 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1155 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1163 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1168 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1176 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1181 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1189 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1194 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1195 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1199 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1204 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1205 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1211 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1212 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1228 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1234 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1239 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1248 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1256 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1261 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1262 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1270 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1275 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1276 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1281 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1282 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1290 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1294 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1301 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1308 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1312 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1318 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1319 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1324 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1330 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1338 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1346 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1353 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1358 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1359 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1366 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1368 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1369 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1374 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1375 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1380 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1387 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1389 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1390 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1401 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1412 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1421 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1432 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1440 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1446 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1447 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1453 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1462 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1470 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1475 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1483 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1487 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1496 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1504 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1511 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1515 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1523 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1531 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1539 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1546 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1550 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1561 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1579 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1587 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1596 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1601 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1602 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1612 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1616 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1625 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1633 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1637 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1646 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1654 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1658 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1662 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1669 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1676 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1687 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1695 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1704 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1712 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1720 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1726 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1727 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1735 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1750 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1755 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1763 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1770 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1774 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1788 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1793 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1797 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1805 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1814 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1820 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1827 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1831 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1839 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1845 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1850 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1855 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1860 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1865 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1870 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1871 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1879 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1887 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1891 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1907 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1912 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1920 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1927 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1931 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1938 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1946 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1953 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1959 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1960 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1967 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1974 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1985 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1989 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1997 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2002 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2010 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2015 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2023 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2028 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 2029 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2033 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2038 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 2039 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2045 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 2046 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2062 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2068 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2073 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2082 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2090 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2095 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 2096 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2104 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2109 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 2110 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2115 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 2116 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2124 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2128 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2135 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2142 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2146 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2152 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 2153 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2158 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2164 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2172 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2180 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2187 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2192 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 2193 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2200 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2202 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2203 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2208 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 2209 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2214 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2221 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2223 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2224 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2235 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2246 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2255 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2266 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2274 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2280 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 2281 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2287 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2296 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2304 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2309 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2317 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2321 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2330 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2338 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2345 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2349 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2357 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2365 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2373 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2380 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2384 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2395 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2413 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2421 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2430 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2435 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 2436 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2446 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2450 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2459 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2467 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2471 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2480 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2488 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2492 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2496 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as an acidic nitrogen
+# WARNING: set_pdb_atom_types: can't deduce type of atom   14 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom   15 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom   16 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom   17 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom   18 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom   25 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom   26 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom   42 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom   43 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom   57 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom   65 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom   73 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom   74 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom   86 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom   93 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  104 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  105 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  111 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  112 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  124 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  135 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  136 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  151 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  161 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  162 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  169 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  170 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  181 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  186 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  191 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  196 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  209 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  210 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  217 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  218 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  231 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  243 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  261 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  262 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  268 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  269 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  276 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  283 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  284 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  290 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  297 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  298 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  308 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  309 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  327 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  328 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  333 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  341 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  346 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  353 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  354 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  376 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  404 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  412 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  420 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  421 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  434 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  435 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  454 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  455 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  465 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  466 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  472 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  473 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  483 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  489 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  495 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  510 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  518 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  531 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  545 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  552 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  562 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  563 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  564 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  565 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  566 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  573 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  574 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  575 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  576 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  577 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  593 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  594 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  595 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  596 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  597 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  604 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  605 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  611 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  618 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  634 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  635 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  640 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  647 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  648 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  660 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  679 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  680 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  687 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  688 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  695 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  696 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  703 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  704 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  714 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  715 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  722 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  723 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  724 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  725 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  726 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  733 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  734 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  735 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  736 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  737 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  751 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  752 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  774 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  777 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  779 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  780 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  781 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  789 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  797 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  798 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  811 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  818 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  819 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  833 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  834 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  848 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  849 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  850 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  851 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  852 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  859 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  860 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  876 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  877 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  891 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  899 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  907 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  908 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  920 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  927 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  938 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  939 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  945 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  946 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  958 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  969 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  970 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  985 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  995 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom  996 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1003 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1004 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1015 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1020 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1025 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1030 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1043 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1044 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1051 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1052 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1065 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1077 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1095 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1096 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1102 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1103 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1110 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1117 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1118 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1124 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1131 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1132 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1142 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1143 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1161 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1162 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1167 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1175 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1180 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1187 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1188 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1210 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1238 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1246 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1254 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1255 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1268 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1269 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1288 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1289 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1299 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1300 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1306 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1307 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1317 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1323 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1329 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1344 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1352 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1365 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1379 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1386 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1396 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1397 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1398 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1399 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1400 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1407 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1408 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1409 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1410 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1411 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1427 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1428 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1429 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1430 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1431 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1438 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1439 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1445 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1452 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1468 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1469 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1474 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1481 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1482 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1494 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1513 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1514 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1521 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1522 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1529 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1530 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1537 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1538 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1548 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1549 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1556 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1557 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1558 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1559 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1560 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1567 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1568 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1569 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1570 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1571 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1585 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1586 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1608 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1611 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1613 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1614 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1615 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1623 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1631 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1632 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1645 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1652 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1653 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1667 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1668 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1682 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1683 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1684 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1685 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1686 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1693 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1694 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1710 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1711 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1725 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1733 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1741 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1742 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1754 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1761 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1772 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1773 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1779 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1780 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1792 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1803 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1804 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1819 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1829 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1830 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1837 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1838 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1849 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1854 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1859 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1864 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1877 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1878 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1885 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1886 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1899 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1911 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1929 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1930 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1936 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1937 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1944 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1951 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1952 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1958 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1965 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1966 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1976 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1977 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1995 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 1996 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2001 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2009 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2014 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2021 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2022 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2044 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2072 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2080 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2088 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2089 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2102 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2103 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2122 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2123 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2133 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2134 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2140 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2141 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2151 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2157 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2163 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2178 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2186 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2199 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2213 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2220 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2230 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2231 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2232 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2233 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2234 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2241 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2242 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2243 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2244 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2245 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2261 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2262 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2263 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2264 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2265 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2272 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2273 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2279 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2286 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2302 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2303 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2308 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2315 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2316 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2328 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2347 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2348 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2355 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2356 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2363 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2364 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2371 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2372 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2382 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2383 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2390 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2391 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2392 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2393 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2394 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2401 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2402 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2403 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2404 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2405 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2419 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2420 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2442 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2445 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2447 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2448 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2449 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2457 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2465 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2466 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2479 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2486 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2487 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2501 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: set_pdb_atom_types: can't deduce type of atom 2502 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb, replacing by Du
+# WARNING: atom   58 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  202 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  291 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  360 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  370 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  377 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  427 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  441 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  447 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  484 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  524 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  540 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  612 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  767 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  892 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1036 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1125 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1194 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1204 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1211 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1261 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1275 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1281 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1318 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1358 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1374 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1446 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1601 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1726 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1870 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1959 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 2028 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 2038 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 2045 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 2095 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 2109 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 2115 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 2152 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 2192 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 2208 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 2280 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 2435 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/6c5f_clean.pdb is deduced as a singly charged oxygen
+  N.plc donors                             : 
+  none found
+
+  Acidic nitrogen acceptors                : 
+
+  1    8    19   27   36   
+  44   52   59   67   82   
+  87   95   102  106  120  
+  125  129  137  146  152  
+  159  163  171  177  182  
+  187  192  197  203  211  
+  219  223  239  244  252  
+  259  263  270  278  285  
+  292  299  306  317  321  
+  329  334  342  347  355  
+  361  365  371  378  394  
+  400  405  414  422  428  
+  436  442  448  456  460  
+  467  474  478  485  490  
+  496  504  512  519  525  
+  532  534  535  541  546  
+  553  555  556  567  578  
+  587  598  606  613  619  
+  628  636  641  649  653  
+  662  670  677  681  689  
+  697  705  712  716  727  
+  745  753  762  768  778  
+  782  791  799  803  812  
+  820  824  828  835  842  
+  853  861  870  878  886  
+  893  901  916  921  929  
+  936  940  954  959  963  
+  971  980  986  993  997  
+  1005 1011 1016 1021 1026 
+  1031 1037 1045 1053 1057 
+  1073 1078 1086 1093 1097 
+  1104 1112 1119 1126 1133 
+  1140 1151 1155 1163 1168 
+  1176 1181 1189 1195 1199 
+  1205 1212 1228 1234 1239 
+  1248 1256 1262 1270 1276 
+  1282 1290 1294 1301 1308 
+  1312 1319 1324 1330 1338 
+  1346 1353 1359 1366 1368 
+  1369 1375 1380 1387 1389 
+  1390 1401 1412 1421 1432 
+  1440 1447 1453 1462 1470 
+  1475 1483 1487 1496 1504 
+  1511 1515 1523 1531 1539 
+  1546 1550 1561 1579 1587 
+  1596 1602 1612 1616 1625 
+  1633 1637 1646 1654 1658 
+  1662 1669 1676 1687 1695 
+  1704 1712 1720 1727 1735 
+  1750 1755 1763 1770 1774 
+  1788 1793 1797 1805 1814 
+  1820 1827 1831 1839 1845 
+  1850 1855 1860 1865 1871 
+  1879 1887 1891 1907 1912 
+  1920 1927 1931 1938 1946 
+  1953 1960 1967 1974 1985 
+  1989 1997 2002 2010 2015 
+  2023 2029 2033 2039 2046 
+  2062 2068 2073 2082 2090 
+  2096 2104 2110 2116 2124 
+  2128 2135 2142 2146 2153 
+  2158 2164 2172 2180 2187 
+  2193 2200 2202 2203 2209 
+  2214 2221 2223 2224 2235 
+  2246 2255 2266 2274 2281 
+  2287 2296 2304 2309 2317 
+  2321 2330 2338 2345 2349 
+  2357 2365 2373 2380 2384 
+  2395 2413 2421 2430 2436 
+  2446 2450 2459 2467 2471 
+  2480 2488 2492 2496 
+
+--------------------------------------------------------------------------------
+--- Active site                                                              ---
+--------------------------------------------------------------------------------
+  Deriving cavity from ligand file         : /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/cavity_F_ID.mol2
+  Picking atoms within distance            :   8.000
+# WARNING: atom    7 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/cavity_F_ID.mol2 is type  C.ar but should be   C.2 (check_atom_types)
+# WARNING: atom   13 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/cavity_F_ID.mol2 is type  C.ar but should be   C.2 (check_atom_types)
+# WARNING: atom   14 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/cavity_F_ID.mol2 is type  C.ar but should be   C.2 (check_atom_types)
+
+
+* Cavity atoms                                                                  
+  1528  1529  1530  1534  1684  1686  1926  1927  2121  2123  
+  2423  2424  2430  2431  2432  2433  2434  2435  2436  2437  
+  2438  2450  2452  2453  2459  2460  2461  2462  2463  2464  
+  2465  2466  2467  2468  2469  2470  2471  2472  2473  2474  
+  2475  2476  2477  2478  2479  2480  2494  2495  2496  2497  
+  2498  2499  2500  2501  2502  3034  3198  3200  3284  3287  
+  3288  3290  3291  3292  3293  3309  3484  3488  3489  3490  
+  3884  3885  3887  3888  3889  3892  4265  4268  4273  4274  
+  4275  4276  4277  4278  4279  4280  4281  4282  4283  4284  
+  4285  4286  4287  4288  4289  4290  4291  4292  4293  4294  
+  4295  4296  4297  4298  4299  4304  4370  4371  4375  4376  
+  4377  4658  4670  4671  4672  4673  4674  4675  4676  1527  
+  1669  1682  1685  1921  1923  1924  1925  1928  1930  1944  
+  2120  2419  3032  3199  3203  3289  3308  3310  3483  3486  
+  3492  3494  3508  3509  4373  4655  4660  4899  1670  1675  
+  1899  1922  1929  2116  2117  2122  3028  3031  3202  3485  
+  3487  3755  3756  4175  4180  4186  4372  4656  2422  3033  
+  4176  4178  4179  4374  4665  1671  1672  1673  1674  1676  
+  1681  1683  1896  1897  1898  1906  1920  1931  1943  2107  
+  2111  2112  2114  2115  2417  3496  3525  4170  4172  4174  
+  4185  4659  1895  2106  2110  2113  2118  2119  2414  2415  
+  2416  2418  2421  2948  3027  3029  3030  3526  4171  4173  
+  4177  4187  4617  4618  4653  4657  4663  1545  1677  1680  
+  1892  1903  1932  1933  1937  1938  2105  2124  3024  3025  
+  3311  3319  3482  3495  3501  3503  3504  3507  3937  4159  
+  4169  4388  4389  4716  1189  1190  1193  1194  1900  1905  
+  1914  1915  1934  1935  1939  1942  1945  3285  3286  3318  
+  3497  3498  3505  3506  4183  4499  4813  4820  4821  4822  
+  4824  3491  3283  3493  4818  4823  1883  1885  2104  2108  
+  2125  2128  2132  2133  2134  2413  2420  3018  3022  3023  
+  4156  4157  4161  4378  4379  4381  4384  4385  4387  4393  
+  4398  4646  1678  1893  1936  3210  3502  4677  1183  1186  
+  1188  1191  1246  1247  1518  1523  1524  1913  4300  4305  
+  4810  4815  4817  1917  1918  1919  1679  1693  1882  1884  
+  1886  1891  2098  2102  2140  2141  2398  3016  3017  3208  
+  3209  3314  4160  4164  4390  4394  4397  2126  2129  4380  
+  4654  4664  
+  Number of active atoms                   :    362
+  Calculated cavity radius                 :  11.067
+  Calculated cavity origin                 : -40.20 -39.29  -0.54
+
+  Ligsite cavity detection, MIN_PSP        :      4
+
+--------------------------------------------------------------------------------
+--- Fitting points summary                                                   ---
+--------------------------------------------------------------------------------
+  Protein donor atoms                      :      0
+  
+
+  2435 (single OCO2 atom)
+  2115 (single OCO2 atom)
+  1194 (single OCO2 atom)
+  Protein acceptor atoms                   :     53
+  1534 1927 2424 2430 2433 2435 2436 2450 2453 2459 
+  2462 2467 2470 2471 2474 2480 2495 2496 2499 1669 
+  1923 2116 1672 1676 1920 1931 2107 2115 2110 2113 
+  2119 2416 2421 1903 1938 2124 1189 1194 1915 1934 
+  1945 2104 2128 2413 1247 1518 1523 1918 1919 1679 
+  1882 1891 2398 
+
+  Hydrogens                                :  (n = 0)
+    none found
+
+
+  Lone pairs added to molecule             :     79
+  Numbering                                : from 5056 to 5131
+
+  Protein TRP residues                     : 
+  none found in active site
+
+  Protein rotatable bonds                  : 
+  none found
+
+# WARNING: init_protein: only found 0 h-donors in the active site: check origin and radius
+
+--------------------------------------------------------------------------------
+--- Shape grid                                                               ---
+--------------------------------------------------------------------------------
+  Maximum length of gridpt list            :    126
+  Average list length                      :     67
+
+--------------------------------------------------------------------------------
+--- Receptor Density Scaling                                                 ---
+--------------------------------------------------------------------------------
+  Minimum Protein Density                  :      0
+  Maximum Protein Density                  :    140
+Receptor density scaling is OFF
+
+
+  Length of shape fitting list             :   5528
+
+--------------------------------------------------------------------------------
+--- Interaction Motif                                                        ---
+--------------------------------------------------------------------------------
+  Number of interactions                   :      0
+  Number of motifs                         :      0
+  Weight                                   :  50.000
+  Minimum Include Score                    : 0.000001
+  Ignore Zero Bits?                        :      0
+
+calculating chemscore clash map
+calculating chemscore lipo map
+
+--------------------------------------------------------------------------------
+
+* Protein initialisation time :                                                 
+  total  2.6059 user  2.2496 sys  0.3563
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+--- Active Molecule Summary                                                  ---
+--------------------------------------------------------------------------------
+# WARNING: atom    7 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/cristal.mol2 is type  C.ar but should be   C.2 (check_atom_types)
+# WARNING: atom   13 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/cristal.mol2 is type  C.ar but should be   C.2 (check_atom_types)
+# WARNING: atom   14 in /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/cristal.mol2 is type  C.ar but should be   C.2 (check_atom_types)
+  Ligand reference                         : /mnt/e/GOLD/Screening_2/output/prep_AF_1_R.mol2/cristal.mol2
+    ligand name                            : F:ID
+  N.plc donors                             : 
+  none found
+
+  Acidic nitrogen acceptors                : 
+  none found
+  Sulfur acceptors                         :
+  none found
+
+
