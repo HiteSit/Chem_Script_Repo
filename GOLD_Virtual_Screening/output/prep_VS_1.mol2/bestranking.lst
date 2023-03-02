@@ -3,6 +3,6 @@
 #
 # Format is:
 #
-#     Fitness  S(hb_ext) S(vdw_ext)  S(hb_int)    S(int)      intcor RMS(heavy)     time                               File name                Ligand name
+#     Score     S(PLP)   S(hbond)     S(cho)   S(metal)  DE(clash)   DE(tors)     intcor RMS(heavy)     time                               File name                Ligand name
 
-     48.38       0.00      39.22       0.00      -5.54       3.78    5.240   21.257  '/mnt/e/GOLD/Screening_2/output/prep_VS_1.mol2/gold_soln_prep_VS_1_m1_1.mol2'                 '00000001'
+     61.52     -56.80       0.00       2.00       0.00       0.00       0.67       0.05    4.908    3.965  '/mnt/e/1_Coding/1_Script_Github/Chem_Script_Repo/GOLD_Virtual_Screening/output/prep_VS_1.mol2/gold_soln_prep_VS_1_m1_9.mol2'                 '00000001'

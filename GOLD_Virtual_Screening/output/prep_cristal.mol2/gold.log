@@ -1,7 +1,7 @@
-Beginning ligand file '/mnt/e/GOLD/Screening_2/ligands_prepared/prep_cristal.mol2'
-Starting at ligand 1 (byte position 0) in file '/mnt/e/GOLD/Screening_2/ligands_prepared/prep_cristal.mol2'
-Finishing at final ligand in file '/mnt/e/GOLD/Screening_2/ligands_prepared/prep_cristal.mol2'
-Completed docking of ligand 1 in ligand file '/mnt/e/GOLD/Screening_2/ligands_prepared/prep_cristal.mol2' in 18.261058 seconds
+Beginning ligand file '/mnt/e/1_Coding/1_Script_Github/Chem_Script_Repo/GOLD_Virtual_Screening/ligands_prepared/prep_cristal.mol2'
+Starting at ligand 1 (byte position 0) in file '/mnt/e/1_Coding/1_Script_Github/Chem_Script_Repo/GOLD_Virtual_Screening/ligands_prepared/prep_cristal.mol2'
+Finishing at final ligand in file '/mnt/e/1_Coding/1_Script_Github/Chem_Script_Repo/GOLD_Virtual_Screening/ligands_prepared/prep_cristal.mol2'
+Completed docking of ligand 1 in ligand file '/mnt/e/1_Coding/1_Script_Github/Chem_Script_Repo/GOLD_Virtual_Screening/ligands_prepared/prep_cristal.mol2' in 3.989647 seconds
 
 Finished GOLD batch job, exiting..
 
@@ -9,6 +9,6 @@ Finished GOLD batch job, exiting..
 --------------------------------------------------------------------------------
 
 * Total run time :                                                              
-  total 20.8117 user 20.0947 sys  0.7170
+  total  7.3951 user  6.7083 sys  0.6867
 
 --------------------------------------------------------------------------------

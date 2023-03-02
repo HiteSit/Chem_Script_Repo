@@ -1,7 +1,7 @@
-Beginning ligand file '/mnt/e/GOLD/Screening_2/ligands_prepared/prep_AF_1_R.mol2'
-Starting at ligand 1 (byte position 0) in file '/mnt/e/GOLD/Screening_2/ligands_prepared/prep_AF_1_R.mol2'
-Finishing at final ligand in file '/mnt/e/GOLD/Screening_2/ligands_prepared/prep_AF_1_R.mol2'
-Completed docking of ligand 1 in ligand file '/mnt/e/GOLD/Screening_2/ligands_prepared/prep_AF_1_R.mol2' in 16.004974 seconds
+Beginning ligand file '/mnt/e/1_Coding/1_Script_Github/Chem_Script_Repo/GOLD_Virtual_Screening/ligands_prepared/prep_AF_1_R.mol2'
+Starting at ligand 1 (byte position 0) in file '/mnt/e/1_Coding/1_Script_Github/Chem_Script_Repo/GOLD_Virtual_Screening/ligands_prepared/prep_AF_1_R.mol2'
+Finishing at final ligand in file '/mnt/e/1_Coding/1_Script_Github/Chem_Script_Repo/GOLD_Virtual_Screening/ligands_prepared/prep_AF_1_R.mol2'
+Completed docking of ligand 1 in ligand file '/mnt/e/1_Coding/1_Script_Github/Chem_Script_Repo/GOLD_Virtual_Screening/ligands_prepared/prep_AF_1_R.mol2' in 3.294847 seconds
 
 Finished GOLD batch job, exiting..
 
@@ -9,6 +9,6 @@ Finished GOLD batch job, exiting..
 --------------------------------------------------------------------------------
 
 * Total run time :                                                              
-  total 18.6182 user 18.0973 sys  0.5209
+  total  6.5740 user  5.9309 sys  0.6431
 
 --------------------------------------------------------------------------------

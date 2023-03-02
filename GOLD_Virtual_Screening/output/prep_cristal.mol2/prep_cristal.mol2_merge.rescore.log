@@ -1,13 +1,13 @@
-Molecule file: /mnt/e/GOLD/Screening_2/output/prep_cristal.mol2/prep_cristal.mol2_merge.rescore.log
+Molecule file: /mnt/e/1_Coding/1_Script_Github/Chem_Script_Repo/GOLD_Virtual_Screening/output/prep_cristal.mol2/prep_cristal.mol2_merge.rescore.log
 
 Status Simplex RMSd      Score         DG    S(hbond)    S(metal)    S(lipo)     H(rot)  DE(clash)    DE(int)     intcor   Ligand identifier
-Ok     1       0.51      11.22     -19.33       0.00        0.00     118.37       0.00       4.08       4.02       ----   F:ID|prep_cristal|mol2|1|dock1
-Ok     1       0.87      15.33     -19.16       0.00        0.00     116.92       0.00       0.16       3.66       ----   F:ID|prep_cristal|mol2|1|dock2
-Ok     1       0.50      16.71     -20.10       0.00        0.00     124.98       0.00       0.44       2.96       ----   F:ID|prep_cristal|mol2|1|dock3
-Ok     1       0.16      16.00     -21.37       0.00        0.00     135.85       0.00       2.41       2.96       ----   F:ID|prep_cristal|mol2|1|dock4
-Ok     1       0.43      15.56     -21.50       0.00        0.00     136.93       0.00       3.71       2.23       ----   F:ID|prep_cristal|mol2|1|dock5
-Ok     1       0.93      15.78     -20.93       0.00        0.00     132.01       0.00       1.79       3.35       ----   F:ID|prep_cristal|mol2|1|dock6
-Ok     1       0.58      14.75     -20.46       0.00        0.00     128.03       0.00       1.85       3.85       ----   F:ID|prep_cristal|mol2|1|dock7
-Ok     1       0.94      15.66     -20.55       0.00        0.00     128.82       0.00       1.63       3.27       ----   F:ID|prep_cristal|mol2|1|dock8
-Ok     1       0.59      12.03     -18.74       0.00        0.00     113.31       0.00       2.79       3.91       ----   F:ID|prep_cristal|mol2|1|dock9
-Ok     1       0.81      15.41     -19.86       0.00        0.00     122.90       0.00       0.50       3.95       ----   F:ID|prep_cristal|mol2|1|dock10
+Ok     1       0.54      14.44     -18.86       0.00        0.00     114.34       0.00       0.16       4.25       ----   F:ID|prep_cristal|mol2|1|dock1
+Ok     1       0.22      16.16     -20.83       0.00        0.00     131.20       0.00       0.39       4.28       ----   F:ID|prep_cristal|mol2|1|dock2
+Ok     1       0.51      14.79     -19.21       0.00        0.00     117.36       0.00       0.22       4.20       ----   F:ID|prep_cristal|mol2|1|dock3
+Ok     1       0.32      13.88     -17.73       0.00        0.00     104.68       0.00       0.00       3.85       ----   F:ID|prep_cristal|mol2|1|dock4
+Ok     1       0.36      15.78     -20.64       0.00        0.00     129.54       0.00       1.72       3.14       ----   F:ID|prep_cristal|mol2|1|dock5
+Ok     1       0.22      13.63     -19.66       0.00        0.00     121.22       0.00       0.48       5.56       ----   F:ID|prep_cristal|mol2|1|dock6
+Ok     1       0.31      15.28     -18.78       0.00        0.00     113.68       0.00       0.28       3.22       ----   F:ID|prep_cristal|mol2|1|dock7
+Ok     1       0.35      14.44     -18.27       0.00        0.00     109.31       0.00       0.04       3.79       ----   F:ID|prep_cristal|mol2|1|dock8
+Ok     1       0.28      14.96     -17.74       0.00        0.00     104.82       0.00       0.05       2.74       ----   F:ID|prep_cristal|mol2|1|dock9
+Ok     1       0.37      15.22     -18.02       0.00        0.00     107.20       0.00       0.05       2.75       ----   F:ID|prep_cristal|mol2|1|dock10
