@@ -1,0 +1,8 @@
+# File containing a listing of the fitness of the top-ranked
+# individual for each ligand docked in GOLD.
+#
+# Format is:
+#
+#     Fitness  S(hb_ext) S(vdw_ext)  S(hb_int)    S(int)      intcor     time                               File name                Ligand name
+
+     36.03       2.00      24.82       0.00      -0.10      -0.76   28.243  '/mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/3mvj/2/gold_soln_ligand_prepared_m1_4.mol2'             'CT1002167954'

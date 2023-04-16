@@ -1,0 +1,14 @@
+Beginning ligand file '/mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d1n/ligand_prepared.mol2'
+Starting at ligand 1 (byte position 0) in file '/mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d1n/ligand_prepared.mol2'
+Finishing at final ligand in file '/mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d1n/ligand_prepared.mol2'
+Completed docking of ligand 1 in ligand file '/mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d1n/ligand_prepared.mol2' in 7.519836 seconds
+
+Finished GOLD batch job, exiting..
+
+
+--------------------------------------------------------------------------------
+
+* Total run time :                                                              
+  total 14.9727 user 14.1206 sys  0.8521
+
+--------------------------------------------------------------------------------

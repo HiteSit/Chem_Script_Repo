@@ -1,0 +1,855 @@
+
+--------------------------------------------------------------------------------
+--- GOLD DOCKING RUN  (GOLD v2022.3.0)                                       ---
+--------------------------------------------------------------------------------
+
+GOLD is Genetic Optimisation for Ligand Docking.
+
+GOLD is the result of a collaborative project between Sheffield University,
+the CCDC and Glaxo Wellcome. GOLD is a proprietary product for which the
+copyright is held by the Cambridge Crystallographic Data Centre (CCDC)
+
+Please forward any comments, bugs, or queries to CCDC Software Support:
+
+  Cambridge Crystallographic Data Centre
+  12 Union Road
+  Cambridge CB2 1EZ
+  tel: (44) (1223) 336022
+  email: support@ccdc.cam.ac.uk
+
+--------------------------------------------------------------------------------
+
+  User                                     : hitesit
+  Invocation Time                          : Sun Apr 16 02:22:23 2023
+
+
+--------------------------------------------------------------------------------
+--- Parameter setting overview (user-defined or automatic)                   ---
+--------------------------------------------------------------------------------
+  maxops                          automatic setting
+  popsiz                          automatic setting
+  select_pressure                 automatic setting
+  n_islands                       automatic setting
+  niche_siz                       automatic setting
+  pt_crosswt                      automatic setting
+  allele_mutatewt                 automatic setting
+  migratewt                       automatic setting
+  start_vdw_linear_cutoff         defined by user
+  initial_virtual_pt_match_max    defined by user
+
+--------------------------------------------------------------------------------
+--- ChemScore parameters                                                     ---
+--------------------------------------------------------------------------------
+
+* ChemScore coefficients                                                        
+  ZERO_COEFFICIENT                         :  -5.480
+  HBOND_COEFFICIENT                        :  -3.000
+  INTERNAL_HBOND_COEFFICIENT               :  -3.340
+  METAL_COEFFICIENT                        :  -6.000
+  LIPO_COEFFICIENT                         :  -0.117
+  ROT_COEFFICIENT                          :   2.560
+  INTRA_COEFFICIENT                        :   1.000
+  LINK_BEND_COEFFICIENT                    :   0.250
+  PROTEIN_ENERGY_COEFFICIENT               :   1.000
+  CHARGED_HBOND_SCALING                    :   2.000
+  CHARGED_METAL_SCALING                    :   2.000
+
+* Hydrogen-bond term                                                            
+  HBOND_FUNCTION                           : CHEMSCORE_DOCKING
+  R_IDEAL                                  :   1.850
+  DELTA_R_IDEAL                            :   0.250
+  DELTA_R_MAX                              :   0.650
+  HBOND_R_SIGMA                            :   0.000
+  ALPHA_IDEAL                              : 180.000
+  DELTA_ALPHA_IDEAL                        :  30.000
+  DELTA_ALPHA_MAX                          :  80.000
+  HBOND_ALPHA_SIGMA                        :   0.000
+  BETA_IDEAL                               : 180.000
+  DELTA_BETA_IDEAL                         :  80.000
+  DELTA_BETA_MAX                           : 100.000
+  HBOND_BETA_SIGMA                         :   0.000
+USE_HBOND_STRENGTHS = OFF
+
+  CH...O term                              : SPECIAL
+  CHO_COEFFICIENT       (kJ/mol)           :  -3.000
+  CHO_CLASH_RADIUS      (Angstrom)         :   2.400
+  CHO_R_IDEAL           (Angstrom)         :   2.350
+  CHO_DELTA_R_IDEAL     (Angstrom)         :   0.250
+  CHO_DELTA_R_MAX       (Angstrom)         :   0.650
+  CHO_ALPHA_IDEAL       (degrees)          : 180.000
+  CHO_DELTA_ALPHA_IDEAL (degrees)          :  50.000
+  CHO_DELTA_ALPHA_MAX   (degrees)          : 100.000
+  CHO_BETA_IDEAL        (degrees)          : 180.000
+  CHO_DELTA_BETA_IDEAL  (degrees)          :  80.000
+  CHO_DELTA_BETA_MAX    (degrees)          : 100.000
+
+Sulfur...acceptor term: 
+
+
+* Metal term                                                                    
+  METAL_R1                                 :   2.600
+  METAL_R2                                 :   3.000
+  METAL_R_SIGMA                            :   0.100
+
+* Specific metal-coordination types                                             
+
+
+* Lipophilic term                                                               
+  MAKE_PLANAR_N_LIPO                       :      0
+  LIPO_R1                                  :   4.100
+  LIPO_R2                                  :   7.100
+  LIPO_R_SIGMA                             :   0.100
+
+
+* Clash term                                                                    
+  CLASH_FUNCTION                           : CHEMSCORE_DOCKING
+  CLASH_RADIUS_GENERAL                     :   3.100
+  CLASH_RADIUS_SULPHUR                     :   3.350
+  CLASH_RADIUS_HBOND                       :   1.600
+  CLASH_RADIUS_METAL                       :   1.380
+  CLASH_RADIUS_SIGMA                       :   0.000
+
+
+* Torsion term                                                                  
+  SP3_SP3_BOND         A =  0.18750 (kJ/mol); n = 3.0; f0 =  3.14159 (rad)
+  SP3_SP2_BOND         A =  0.09375 (kJ/mol); n = 6.0; f0 =  0.00000 (rad)
+  SP2_SP2_BOND         A =  0.18750 (kJ/mol); n = 2.0; f0 =  0.00000 (rad)
+  UNKNOWN_BOND         A =  0.00000 (kJ/mol); n = 0.0; f0 =  0.00000 (rad)
+  EXOCYCLIC_BOND       A =  0.50000 (kJ/mol); n = 1.0; f0 =  3.14159 (rad)
+USE_EXOCYCLIC_TORSION_TERM = 1
+
+
+* Scaling                                                                       
+  HBOND_SCALING                            :      0
+  HBOND_SCALING_SAMPLES                    :      1
+  HBOND_SCALING_END                        :  75.000
+  DELTA_R_MAX_START                        :   1.150
+  DELTA_ALPHA_MAX_START (deg)              : 110.000
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+--- CHEMPLP parameters                                                       ---
+--------------------------------------------------------------------------------
+
+  PLP_COEFFICIENT                          :   1.000
+  PLP_LIGAND_CLASH_COEFFICIENT             :   1.000
+  PLP_LIGAND_TORSION_COEFFICIENT           :   2.000
+  PLP_PROTEIN_ENERGY_COEFFICIENT           :   1.000
+  PLP_CONSTRAINT_COEFFICIENT               :   1.000
+  PLP_GRID_SPACING                         :   0.300
+
+  PLP_LIGAND_TORSION_FUNCTION              : CHEMSCORE
+  PLP_LIGAND_CLASH_FUNCTION                : PLP
+  PLP_HBOND_METAL_FUNCTION                 : CHEMSCORE
+
+  PLP_WATER_BARRIER                        :   3.000
+
+  HBOND_A                                  :   2.300
+  HBOND_B                                  :   2.600
+  HBOND_C                                  :   3.100
+  HBOND_D                                  :   3.400
+  HBOND_E                                  :  -1.000
+  HBOND_F                                  :  20.000
+
+  BURIED_A                                 :   3.400
+  BURIED_B                                 :   3.600
+  BURIED_C                                 :   4.500
+  BURIED_D                                 :   5.500
+  BURIED_E                                 :  -0.100
+  BURIED_F                                 :  20.000
+
+  METAL_A                                  :   1.400
+  METAL_B                                  :   2.200
+  METAL_C                                  :   2.600
+  METAL_D                                  :   2.800
+  METAL_E                                  :  -1.000
+  METAL_F                                  :  20.000
+
+  NONPOLAR_A                               :   3.400
+  NONPOLAR_B                               :   3.600
+  NONPOLAR_C                               :   4.500
+  NONPOLAR_D                               :   5.500
+  NONPOLAR_E                               :  -0.400
+  NONPOLAR_F                               :  20.000
+
+  REPULSIVE_A                              :   3.200
+  REPULSIVE_B                              :   5.000
+  REPULSIVE_C                              :   0.100
+  REPULSIVE_D                              :  20.000
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+--- Parameter settings                                                       ---
+--------------------------------------------------------------------------------
+
+* Population settings                                                           
+  maxops                                   : auto   
+  popsiz                                   : auto   
+  select_pressure                          : auto   
+  n_islands                                : auto   
+  niche_siz                                : auto   
+
+* GA settings                                                                   
+  pt_crosswt                               : auto   
+  allele_mutatewt                          : auto   
+  migratewt                                : auto   
+
+* Search settings                                                               
+  start_vdw_linear_cutoff                  :   6.000
+  initial_virtual_pt_match_max             :   3.000
+
+* Cavity detection                                                              
+  Cavity detection algorithm               : Ligsite
+
+* Solvent Accessibility                                                         
+  Solvate all H bond donors and acceptors  : on
+
+* Ligand treatment                                                              
+  Internal ligand hydrogen bonds           : ignored
+  Flexible ligand ring corners             : fixed
+  Ligand carboxylic OH groups              : flip
+  Ligand amide bonds                       : fixed
+  Ligand pyramidal nitrogen groups         : fixed
+  Ligand bond to planar nitrogen groups    : allow 180 degrees flip
+  Ligand planar nitrogen bonds (Ring-NH-R) : can flip
+  Ligand planar nitrogen bonds (Ring-NRR') : can flip
+  Flatten amide and trigonal nitrogens     : yes
+  Torsional distributions                  : are used
+  Calculating torsional energy of ligand   : yes
+  Ligand energy                            : relative wrt best tors+vdw+hbond
+                                           : reported fitness is adjusted
+  Post-process ligand bonds                : yes
+
+* Protein treatment:                                                            
+  Protein carboxylic OH groups             : flip
+
+* Algorithm Settings (from parameter file):                                     
+  VDW potential (external)                 : 4-8       LJ potential (no. 1)
+  VDW potential (external)                 : 4-8 2-4 split potential (no. 2)
+  VDW potential (external)                 : 4-8 1-2 split potential (no. 3)
+  VDW potential (internal)                 : 6-12       LJ potential (no. 1)
+  VDW potential (internal)                 : 4-8       LJ potential (no. 2)
+  VDW potential (internal)                 : slot 3 not used
+  Weighting for distance matching          : squared
+  Weighting for angle    matching          : squared
+  Mapping, second pass results             : taking best three
+  Internal energy                          : on absolute scale
+  External energy weight                   :   1.375
+  Internal energy weight                   :   1.000
+  Length of H bond                         :   2.900
+  Angle coding                             : binary coded
+  Angle bit length                         : 8 bits
+  Allow duplicates in chromosome mappings  : yes
+  Parameter scaling                        : on
+  Simplex minimisation after every GA run  : yes
+  Infer hetatm types from residue names    : yes
+  Ligand relaxation                        : on
+    Maximum relax distance                 :   2.000
+    Maximum relax angle                    :  60.000
+  Ionisation dispersion term               : external
+
+* Geometric parameters for Fitness Function (from parameter file)               
+  Initial Virtual pt dist max              :   3.000
+  Final Virtual pt dist max                :   2.000
+  Virtual point distance min               :   0.500
+  Virtual point angle min                  :  60.000
+  Virtual point angle max                  : 160.000
+  Cone virtual point angle min             : 120.000
+  Cone virtual point angle max             : 160.000
+  Contact distance                         :  10.000
+  D/A vdw contact weighting                :   1.000
+  Minimum neighbour weighting              :   0.200
+  Mapping second pass distance             :   2.000
+
+* Lone pair parameters                                                          
+  Planar LP: minimum angle with plane      :  20.000
+  Planar LP: maximum angle with plane      :  90.000
+  Protein planar acceptors                 : need only one lp solvated
+  Solvated point distance                  :  -0.200
+
+* VDW parameters                                                                
+  Border round vdw grid                    :   4.000
+  VDW cutoff fraction                      :   1.500
+  VDW cutoff distance                      :  20.000
+  Number of bins in VDW lookup             :  10000
+
+* Specific metal-coordination types                                             
+
+* Other settings                                                                
+  Write statistics                         : off
+  Current parameters file                  :
+  /home/hitesit/CCDC/Discovery_2022/GOLD/gold/gold.params                       
+--------------------------------------------------------------------------------
+
+Processing protein 1: /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb 	DE(Protein): 0.00
+
+--------------------------------------------------------------------------------
+--- Loading protein                                                          ---
+--------------------------------------------------------------------------------
+  Protein file                             : /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb
+==================================
+APPLYING GOLD TEMPLATES TO PROTEIN
+==================================
+
+No templates identified from 
+
+==================================
+# WARNING: atom   42 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom   90 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  126 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  156 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  186 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  219 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  258 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no  265 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom  266 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  291 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  332 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  370 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  400 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  429 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  463 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  482 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  521 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  536 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  562 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  597 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  620 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  652 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  688 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  736 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  779 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  802 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  836 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  878 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  911 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  946 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  965 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  984 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no  991 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom  992 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1018 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1051 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1086 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1106 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1130 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1173 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1211 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1249 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 1255 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 1256 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1276 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1306 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1344 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1375 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1411 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1432 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1458 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1492 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1518 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 1525 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 1527 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1551 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1581 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1624 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1663 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1695 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1741 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1767 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1793 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1838 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1874 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1901 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1946 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1984 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2023 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2068 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 2075 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 2077 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2099 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2128 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 2134 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 2135 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 2156 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2193 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2229 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2274 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2314 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 2321 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 2323 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2346 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2368 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2392 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2428 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2453 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2480 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2506 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2526 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 2533 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 2535 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2560 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 2567 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 2569 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2596 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2634 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2672 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2713 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2750 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2774 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2811 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2843 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2868 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2882 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2901 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2930 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2971 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3009 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3038 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3062 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3099 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3129 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3155 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3201 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3234 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3276 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3312 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3337 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3363 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3386 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3407 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3428 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3454 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 3461 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 3463 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3484 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3508 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3547 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 3554 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 3555 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 3581 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 3588 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 3589 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 3614 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3652 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3691 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3717 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3739 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3772 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3812 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 3819 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 3821 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3842 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3868 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 3875 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 3877 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3901 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 3908 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 3909 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 3934 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3964 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3981 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4013 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4048 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 4055 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 4057 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4083 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4128 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 4134 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 4135 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 4156 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4195 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4237 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4267 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4296 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 4302 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 4303 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 4324 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4362 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4400 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4435 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4456 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4477 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4509 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4538 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4569 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4584 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4604 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4626 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4660 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4703 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4738 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4761 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4788 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4821 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4839 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4874 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4897 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4936 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4964 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4998 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5023 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5042 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5072 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 5079 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 5080 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 5106 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 5113 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 5114 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 5136 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5165 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 5175 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 5210 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5243 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5264 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5298 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5317 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5334 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5362 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5387 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5409 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5447 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5483 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5506 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5536 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5564 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5597 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5638 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5682 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5721 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5744 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5777 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5811 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5830 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5872 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5900 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5933 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5957 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6001 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 6011 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 6040 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6061 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6081 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6098 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6131 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6169 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6211 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6249 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6287 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6325 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6362 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6391 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6413 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6450 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6478 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6510 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6553 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 6563 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 6595 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6620 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6649 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6674 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 6681 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 6682 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 6709 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 6716 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 6718 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6744 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6781 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6823 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6862 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6906 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 6913 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 6914 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 6939 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6978 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7018 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7037 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7052 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7079 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7117 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7144 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7180 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7207 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7230 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7260 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7295 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 7305 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 7337 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7360 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7388 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7420 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7448 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7478 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7504 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7528 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7571 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7595 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7633 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7671 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 7677 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 7678 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 7700 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7743 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7777 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7814 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7843 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7881 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 7887 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 7888 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 7908 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7935 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7960 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 8006 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 8051 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 8088 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 8114 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 8134 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 8158 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 8184 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 8207 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 8246 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 8291 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 8298 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 8300 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 8322 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 8357 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 8367 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 8399 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 8435 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 8461 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 8468 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 8470 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 8496 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  266 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom  992 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 1256 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 2135 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 3555 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 3589 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 3909 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 4135 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 4303 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 5080 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 5114 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 6682 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 6914 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 7678 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 7888 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/7kl0_clean.pdb is deduced as a singly charged oxygen
+  N.plc donors                             : 
+  arg:   38 arg:   40 arg:   41 arg:   49 arg:   51 arg:   52 
+  arg:  684 arg:  686 arg:  687 arg:  695 arg:  697 
+  arg:  698 arg:  732 arg:  734 arg:  735 arg:  743 
+  arg:  745 arg:  746 arg: 1454 arg: 1456 arg: 1457 
+  arg: 1691 arg: 1693 arg: 1694 arg: 1702 arg: 1704 
+  arg: 1705 arg: 1789 arg: 1791 arg: 1792 arg: 1800 
+  arg: 1802 arg: 1803 arg: 1897 arg: 1899 arg: 1900 
+  arg: 1908 arg: 1910 arg: 1911 arg: 2225 arg: 2227 
+  arg: 2228 arg: 2236 arg: 2238 arg: 2239 arg: 3151 
+  arg: 3153 arg: 3154 arg: 3162 arg: 3164 arg: 3165 
+  arg: 4079 arg: 4081 arg: 4082 arg: 4090 arg: 4092 
+  arg: 4093 arg: 5634 arg: 5636 arg: 5637 arg: 5645 
+  arg: 5647 arg: 5648 arg: 6740 arg: 6742 arg: 6743 
+  arg: 8002 arg: 8004 arg: 8005 arg: 8013 arg: 8015 
+  arg: 8016 arg: 8492 arg: 8494 arg: 8495 arg: 8503 
+  arg: 8505 arg: 8506 
+
+  Acidic nitrogen acceptors                : 
+
+  42   90   126  156  186  
+  219  258  291  332  370  
+  400  429  463  482  521  
+  536  562  597  620  652  
+  688  736  779  802  836  
+  878  911  946  965  984  
+  1018 1051 1086 1106 1130 
+  1173 1211 1249 1276 1306 
+  1344 1375 1411 1432 1458 
+  1492 1518 1527 1551 1581 
+  1624 1663 1695 1741 1767 
+  1793 1838 1874 1901 1946 
+  1984 2023 2068 2077 2099 
+  2128 2156 2193 2229 2274 
+  2314 2323 2346 2368 2392 
+  2428 2453 2480 2506 2526 
+  2535 2560 2569 2596 2634 
+  2672 2713 2750 2774 2811 
+  2843 2868 2882 2901 2930 
+  2971 3009 3038 3062 3099 
+  3129 3155 3201 3234 3276 
+  3312 3337 3363 3386 3407 
+  3428 3454 3463 3484 3508 
+  3547 3581 3614 3652 3691 
+  3717 3739 3772 3812 3821 
+  3842 3868 3877 3901 3934 
+  3964 3981 4013 4048 4057 
+  4083 4128 4156 4195 4237 
+  4267 4296 4324 4362 4400 
+  4435 4456 4477 4509 4538 
+  4569 4584 4604 4626 4660 
+  4703 4738 4761 4788 4821 
+  4839 4874 4897 4936 4964 
+  4998 5023 5042 5072 5106 
+  5136 5165 5210 5243 5264 
+  5298 5317 5334 5362 5387 
+  5409 5447 5483 5506 5536 
+  5564 5597 5638 5682 5721 
+  5744 5777 5811 5830 5872 
+  5900 5933 5957 6001 6040 
+  6061 6081 6098 6131 6169 
+  6211 6249 6287 6325 6362 
+  6391 6413 6450 6478 6510 
+  6553 6595 6620 6649 6674 
+  6709 6718 6744 6781 6823 
+  6862 6906 6939 6978 7018 
+  7037 7052 7079 7117 7144 
+  7180 7207 7230 7260 7295 
+  7337 7360 7388 7420 7448 
+  7478 7504 7528 7571 7595 
+  7633 7671 7700 7743 7777 
+  7814 7843 7881 7908 7935 
+  7960 8006 8051 8088 8114 
+  8134 8158 8184 8207 8246 
+  8291 8300 8322 8357 8399 
+  8435 8461 8470 8496 
+
+--------------------------------------------------------------------------------
+--- Active site                                                              ---
+--------------------------------------------------------------------------------
+  Deriving cavity from ligand file         : /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7kl0/cavity_B_EDO302.mol2
+  Picking atoms within distance            :   8.000
+
+
+* Cavity atoms                                                                  
+  3041  3045  3082  3155  3156  3157  3158  3159  3160  3161  
+  3162  3163  3164  3165  3167  3168  3169  3170  3171  3172  
+  3173  3174  3175  3176  3177  3178  3179  3201  3202  3203  
+  3205  3215  3218  3219  3234  3235  3236  3237  3238  3239  
+  3240  3241  3242  3243  3244  3245  3255  3256  3257  3258  
+  3259  3260  3261  3262  3263  3276  3277  3278  3279  3280  
+  3281  3282  3283  3284  3285  3286  3290  3291  3292  3293  
+  3294  3295  3296  3312  3313  3314  3315  3316  3317  3319  
+  3320  3325  3326  3327  3337  3352  3386  3387  3388  3390  
+  3391  3392  3393  3394  3395  3396  3397  3407  3416  4543  
+  4544  4545  4546  4551  4552  4553  4554  4555  4556  4557  
+  4558  4559  6290  3040  3043  3044  3062  3063  3064  3065  
+  3085  3086  3131  3132  3204  3217  3287  3297  3298  3420  
+  4542  3363  3365  3370  3372  3389  3338  3339  3340  3353  
+  3364  3366  3367  3373  3374  3408  3411  3417  3418  3419  
+  3442  3493  4575  6310  6345  6352  
+  Number of active atoms                   :    156
+  Calculated cavity radius                 :   8.473
+  Calculated cavity origin                 :   6.28 -23.00 -46.14
+
+  Ligsite cavity detection, MIN_PSP        :      4
+  Donor 4546 is in a solvent exposed residue
+
+--------------------------------------------------------------------------------
+--- Fitting points summary                                                   ---
+--------------------------------------------------------------------------------
+  Protein donor atoms                      :     18
+  3155 3162 3164 3165 3201 3234 3245 3276 3312 3317 
+  3337 3386 3407 4546 3062 3287 3363 3428 
+
+  Protein acceptor atoms                   :     29
+  3041 3045 3155 3158 3201 3234 3237 3245 3276 3279 
+  3312 3315 3317 3337 3386 3392 3393 3407 6290 3044 
+  3062 3065 3132 3204 3287 3363 3389 3340 3366 
+
+  Hydrogens                                :  (n = 22)
+  3167 3175 3176 3177 3178 3179 3215 3255 3263 3290 
+  3319 3327 3352 3394 3416 4557 4558 4559 3081 3298 
+  3370 3442 
+
+  Lone pairs added to molecule             :     48
+  Numbering                                : from 8535 to 8582
+
+  Protein TRP residues                     : 
+  none found in active site
+
+  Protein rotatable bonds                  : 
+  [3155 3156] [3201 3202] [3234 3235] [3245 3244] 
+  [3276 3277] [3312 3313] [3317 3316] [3337 3338] 
+  [3386 3387] [3407 3408] [4546 4545] [3062 3063] 
+  [3287 3286] [3363 3364] [3428 3429] [3041 3040] 
+                         [3158 3157] [3237 3236] [3279 3278] [3315 3314] 
+                         [6290 6289] [3065 3064] [3132 3131] [3204 3203] 
+                         [3389 3388] [3340 3339] [3366 3365] 
+
+
+--------------------------------------------------------------------------------
+--- Shape grid                                                               ---
+--------------------------------------------------------------------------------
+  Maximum length of gridpt list            :    130
+  Average list length                      :     57
+
+--------------------------------------------------------------------------------
+--- Receptor Density Scaling                                                 ---
+--------------------------------------------------------------------------------
+  Minimum Protein Density                  :      0
+  Maximum Protein Density                  :    123
+Receptor density scaling is OFF
+
+
+  Length of shape fitting list             :    937
+
+--------------------------------------------------------------------------------
+--- Interaction Motif                                                        ---
+--------------------------------------------------------------------------------
+  Number of interactions                   :      0
+  Number of motifs                         :      0
+  Weight                                   :  50.000
+  Minimum Include Score                    : 0.000001
+  Ignore Zero Bits?                        :      0
+
+
+* Generating PLP maps for types                                                 
+  DONOR   ACCEPTOR   DONACC   NONPOLAR 
+
+--------------------------------------------------------------------------------
+
+* Protein initialisation time :                                                 
+  total  2.5546 user  2.0625 sys  0.4921
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+--- Active Molecule Summary                                                  ---
+--------------------------------------------------------------------------------
+

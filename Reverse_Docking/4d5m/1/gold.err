@@ -1,0 +1,570 @@
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 4 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 7 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 9 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 10 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 19 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 20 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 23 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 25 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+atom no  116 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb is deduced as N.pl3 but this may be
+in error (check bond types of connections)
+
+Warning message: 
+atom no  126 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb is deduced as N.pl3 but this may be
+in error (check bond types of connections)
+
+Warning message: 
+atom no  136 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb is deduced as N.pl3 but this may be
+in error (check bond types of connections)
+
+Warning message: 
+atom no  185 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb is deduced as N.pl3 but this may be
+in error (check bond types of connections)
+
+Warning message: 
+atom no  199 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb is deduced as N.pl3 but this may be
+in error (check bond types of connections)
+
+Warning message: 
+atom no  213 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb is deduced as N.pl3 but this may be
+in error (check bond types of connections)
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 305 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 306 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 305 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 306 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 311 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 312 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 329 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 330 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 329 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 330 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 335 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 336 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+amide nitrogen 429 in molecule /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb is not planar
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 795 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 795 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 802 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 802 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 802 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 802 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 802 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom    1 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom    2 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom    3 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom    4 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom    5 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom    6 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom    7 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom    8 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom    9 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom   10 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom   11 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom   12 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom   13 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom   14 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom   15 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom   16 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom   17 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom   18 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom   19 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom   20 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom   21 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom   22 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom   23 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom   24 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom   25 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom   26 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom   27 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom   28 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom   29 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom   30 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom   31 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom   32 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  107 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  303 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  304 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  311 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  312 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  313 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  314 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  315 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  316 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  317 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  318 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  319 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  320 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  321 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  322 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  323 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  324 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  325 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  326 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  327 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  328 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  335 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  336 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  337 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  338 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  339 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  340 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  341 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  342 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  343 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  344 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  345 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  346 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  347 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  348 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  349 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  350 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  443 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  792 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom  834 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4d5m/4d5m_clean.pdb, replacing by Du
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 4 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 7 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 9 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 10 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 19 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 20 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 23 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 25 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 305 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 306 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 311 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 312 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 329 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 330 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 335 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 336 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 795 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 802 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_connected_atoms: Atom no 19 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_connected_atoms: Atom no 20 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_connected_atoms: Atom no 23 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_connected_atoms: Atom no 25 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_connected_atoms: Atom no 802 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 25 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 802 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 23 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 25 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 335 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 802 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 802 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 25 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 335 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 336 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 802 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 23 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 25 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 335 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 336 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 802 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 23 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 25 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 335 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 336 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 802 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 25 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 335 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 336 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 802 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 23 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 25 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 335 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 802 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_connected_atoms: Atom no 335 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_connected_atoms: Atom no 336 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Fatal error: 
+add_solvated_1lp_to_sp3: sp3 atom N.3, label  N   ( index 17 ), has 6 connections
+

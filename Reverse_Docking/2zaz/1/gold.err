@@ -1,0 +1,201 @@
+Warning message: 
+amide nitrogen 2450 in molecule /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/2zaz/2zaz_clean.pdb is not planar
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2456 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom 2455 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/2zaz/2zaz_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom 2456 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/2zaz/2zaz_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom 2457 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/2zaz/2zaz_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom 2458 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/2zaz/2zaz_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom 2459 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/2zaz/2zaz_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom 2460 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/2zaz/2zaz_clean.pdb, replacing by Du
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom 2461 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/2zaz/2zaz_clean.pdb, replacing by Du
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2456 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2456 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2456 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2456 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2456 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2456 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2456 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_lp_connected_atoms: Atom no 2456 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_lp_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+Protein hydrogen 2463 is connected to 2 atoms.
+Warning message: 
+Protein hydrogen 2464 is connected to 3 atoms.
+Warning message: 
+find_connected_atoms: Atom no 2456 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+
+
+********************************************************************************
+Ligand in file /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/2zaz/ligand_prepared.mol2, named CT1002167954|ligand_prepared|mol2|1|dock1,
+starting at address 0 raised the following warnings and/or errors
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+
+Warning message: 
+find_not_dummy_connected_atoms: Atom no 2458 has more than 8 connections.
+GOLD cannot handle more than 8 connections per atom, so only the first 8 connections will be used.
+

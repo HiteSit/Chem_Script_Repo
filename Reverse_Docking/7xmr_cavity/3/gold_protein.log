@@ -1,0 +1,500 @@
+
+--------------------------------------------------------------------------------
+--- GOLD DOCKING RUN  (GOLD v2022.3.0)                                       ---
+--------------------------------------------------------------------------------
+
+GOLD is Genetic Optimisation for Ligand Docking.
+
+GOLD is the result of a collaborative project between Sheffield University,
+the CCDC and Glaxo Wellcome. GOLD is a proprietary product for which the
+copyright is held by the Cambridge Crystallographic Data Centre (CCDC)
+
+Please forward any comments, bugs, or queries to CCDC Software Support:
+
+  Cambridge Crystallographic Data Centre
+  12 Union Road
+  Cambridge CB2 1EZ
+  tel: (44) (1223) 336022
+  email: support@ccdc.cam.ac.uk
+
+--------------------------------------------------------------------------------
+
+  User                                     : hitesit
+  Invocation Time                          : Sun Apr 16 02:23:19 2023
+
+
+--------------------------------------------------------------------------------
+--- Parameter setting overview (user-defined or automatic)                   ---
+--------------------------------------------------------------------------------
+  maxops                          automatic setting
+  popsiz                          automatic setting
+  select_pressure                 automatic setting
+  n_islands                       automatic setting
+  niche_siz                       automatic setting
+  pt_crosswt                      automatic setting
+  allele_mutatewt                 automatic setting
+  migratewt                       automatic setting
+  start_vdw_linear_cutoff         defined by user
+  initial_virtual_pt_match_max    defined by user
+
+--------------------------------------------------------------------------------
+--- ChemScore parameters                                                     ---
+--------------------------------------------------------------------------------
+
+* ChemScore coefficients                                                        
+  ZERO_COEFFICIENT                         :  -5.480
+  HBOND_COEFFICIENT                        :  -3.000
+  INTERNAL_HBOND_COEFFICIENT               :  -3.340
+  METAL_COEFFICIENT                        :  -6.000
+  LIPO_COEFFICIENT                         :  -0.117
+  ROT_COEFFICIENT                          :   2.560
+  INTRA_COEFFICIENT                        :   1.000
+  LINK_BEND_COEFFICIENT                    :   0.250
+  PROTEIN_ENERGY_COEFFICIENT               :   1.000
+  CHARGED_HBOND_SCALING                    :   2.000
+  CHARGED_METAL_SCALING                    :   2.000
+
+* Hydrogen-bond term                                                            
+  HBOND_FUNCTION                           : CHEMSCORE_DOCKING
+  R_IDEAL                                  :   1.850
+  DELTA_R_IDEAL                            :   0.250
+  DELTA_R_MAX                              :   0.650
+  HBOND_R_SIGMA                            :   0.000
+  ALPHA_IDEAL                              : 180.000
+  DELTA_ALPHA_IDEAL                        :  30.000
+  DELTA_ALPHA_MAX                          :  80.000
+  HBOND_ALPHA_SIGMA                        :   0.000
+  BETA_IDEAL                               : 180.000
+  DELTA_BETA_IDEAL                         :  80.000
+  DELTA_BETA_MAX                           : 100.000
+  HBOND_BETA_SIGMA                         :   0.000
+USE_HBOND_STRENGTHS = OFF
+
+  CH...O term                              : SPECIAL
+  CHO_COEFFICIENT       (kJ/mol)           :  -3.000
+  CHO_CLASH_RADIUS      (Angstrom)         :   2.400
+  CHO_R_IDEAL           (Angstrom)         :   2.350
+  CHO_DELTA_R_IDEAL     (Angstrom)         :   0.250
+  CHO_DELTA_R_MAX       (Angstrom)         :   0.650
+  CHO_ALPHA_IDEAL       (degrees)          : 180.000
+  CHO_DELTA_ALPHA_IDEAL (degrees)          :  50.000
+  CHO_DELTA_ALPHA_MAX   (degrees)          : 100.000
+  CHO_BETA_IDEAL        (degrees)          : 180.000
+  CHO_DELTA_BETA_IDEAL  (degrees)          :  80.000
+  CHO_DELTA_BETA_MAX    (degrees)          : 100.000
+
+Sulfur...acceptor term: 
+
+
+* Metal term                                                                    
+  METAL_R1                                 :   2.600
+  METAL_R2                                 :   3.000
+  METAL_R_SIGMA                            :   0.100
+
+* Specific metal-coordination types                                             
+
+
+* Lipophilic term                                                               
+  MAKE_PLANAR_N_LIPO                       :      0
+  LIPO_R1                                  :   4.100
+  LIPO_R2                                  :   7.100
+  LIPO_R_SIGMA                             :   0.100
+
+
+* Clash term                                                                    
+  CLASH_FUNCTION                           : CHEMSCORE_DOCKING
+  CLASH_RADIUS_GENERAL                     :   3.100
+  CLASH_RADIUS_SULPHUR                     :   3.350
+  CLASH_RADIUS_HBOND                       :   1.600
+  CLASH_RADIUS_METAL                       :   1.380
+  CLASH_RADIUS_SIGMA                       :   0.000
+
+
+* Torsion term                                                                  
+  SP3_SP3_BOND         A =  0.18750 (kJ/mol); n = 3.0; f0 =  3.14159 (rad)
+  SP3_SP2_BOND         A =  0.09375 (kJ/mol); n = 6.0; f0 =  0.00000 (rad)
+  SP2_SP2_BOND         A =  0.18750 (kJ/mol); n = 2.0; f0 =  0.00000 (rad)
+  UNKNOWN_BOND         A =  0.00000 (kJ/mol); n = 0.0; f0 =  0.00000 (rad)
+  EXOCYCLIC_BOND       A =  0.50000 (kJ/mol); n = 1.0; f0 =  3.14159 (rad)
+USE_EXOCYCLIC_TORSION_TERM = 1
+
+
+* Scaling                                                                       
+  HBOND_SCALING                            :      0
+  HBOND_SCALING_SAMPLES                    :      1
+  HBOND_SCALING_END                        :  75.000
+  DELTA_R_MAX_START                        :   1.150
+  DELTA_ALPHA_MAX_START (deg)              : 110.000
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+--- CHEMPLP parameters                                                       ---
+--------------------------------------------------------------------------------
+
+  PLP_COEFFICIENT                          :   1.000
+  PLP_LIGAND_CLASH_COEFFICIENT             :   1.000
+  PLP_LIGAND_TORSION_COEFFICIENT           :   2.000
+  PLP_PROTEIN_ENERGY_COEFFICIENT           :   1.000
+  PLP_CONSTRAINT_COEFFICIENT               :   1.000
+  PLP_GRID_SPACING                         :   0.300
+
+  PLP_LIGAND_TORSION_FUNCTION              : CHEMSCORE
+  PLP_LIGAND_CLASH_FUNCTION                : PLP
+  PLP_HBOND_METAL_FUNCTION                 : CHEMSCORE
+
+  PLP_WATER_BARRIER                        :   3.000
+
+  HBOND_A                                  :   2.300
+  HBOND_B                                  :   2.600
+  HBOND_C                                  :   3.100
+  HBOND_D                                  :   3.400
+  HBOND_E                                  :  -1.000
+  HBOND_F                                  :  20.000
+
+  BURIED_A                                 :   3.400
+  BURIED_B                                 :   3.600
+  BURIED_C                                 :   4.500
+  BURIED_D                                 :   5.500
+  BURIED_E                                 :  -0.100
+  BURIED_F                                 :  20.000
+
+  METAL_A                                  :   1.400
+  METAL_B                                  :   2.200
+  METAL_C                                  :   2.600
+  METAL_D                                  :   2.800
+  METAL_E                                  :  -1.000
+  METAL_F                                  :  20.000
+
+  NONPOLAR_A                               :   3.400
+  NONPOLAR_B                               :   3.600
+  NONPOLAR_C                               :   4.500
+  NONPOLAR_D                               :   5.500
+  NONPOLAR_E                               :  -0.400
+  NONPOLAR_F                               :  20.000
+
+  REPULSIVE_A                              :   3.200
+  REPULSIVE_B                              :   5.000
+  REPULSIVE_C                              :   0.100
+  REPULSIVE_D                              :  20.000
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+--- Parameter settings                                                       ---
+--------------------------------------------------------------------------------
+
+* Population settings                                                           
+  maxops                                   : auto   
+  popsiz                                   : auto   
+  select_pressure                          : auto   
+  n_islands                                : auto   
+  niche_siz                                : auto   
+
+* GA settings                                                                   
+  pt_crosswt                               : auto   
+  allele_mutatewt                          : auto   
+  migratewt                                : auto   
+
+* Search settings                                                               
+  start_vdw_linear_cutoff                  :   6.000
+  initial_virtual_pt_match_max             :   3.000
+
+* Cavity detection                                                              
+  Cavity detection algorithm               : Ligsite
+
+* Solvent Accessibility                                                         
+  Solvate all H bond donors and acceptors  : on
+
+* Ligand treatment                                                              
+  Internal ligand hydrogen bonds           : ignored
+  Flexible ligand ring corners             : fixed
+  Ligand carboxylic OH groups              : flip
+  Ligand amide bonds                       : fixed
+  Ligand pyramidal nitrogen groups         : fixed
+  Ligand bond to planar nitrogen groups    : allow 180 degrees flip
+  Ligand planar nitrogen bonds (Ring-NH-R) : can flip
+  Ligand planar nitrogen bonds (Ring-NRR') : can flip
+  Flatten amide and trigonal nitrogens     : yes
+  Torsional distributions                  : are used
+  Calculating torsional energy of ligand   : yes
+  Ligand energy                            : relative wrt best tors+vdw+hbond
+                                           : reported fitness is adjusted
+  Post-process ligand bonds                : yes
+
+* Protein treatment:                                                            
+  Protein carboxylic OH groups             : flip
+
+* Algorithm Settings (from parameter file):                                     
+  VDW potential (external)                 : 4-8       LJ potential (no. 1)
+  VDW potential (external)                 : 4-8 2-4 split potential (no. 2)
+  VDW potential (external)                 : 4-8 1-2 split potential (no. 3)
+  VDW potential (internal)                 : 6-12       LJ potential (no. 1)
+  VDW potential (internal)                 : 4-8       LJ potential (no. 2)
+  VDW potential (internal)                 : slot 3 not used
+  Weighting for distance matching          : squared
+  Weighting for angle    matching          : squared
+  Mapping, second pass results             : taking best three
+  Internal energy                          : on absolute scale
+  External energy weight                   :   1.375
+  Internal energy weight                   :   1.000
+  Length of H bond                         :   2.900
+  Angle coding                             : binary coded
+  Angle bit length                         : 8 bits
+  Allow duplicates in chromosome mappings  : yes
+  Parameter scaling                        : on
+  Simplex minimisation after every GA run  : yes
+  Infer hetatm types from residue names    : yes
+  Ligand relaxation                        : on
+    Maximum relax distance                 :   2.000
+    Maximum relax angle                    :  60.000
+  Ionisation dispersion term               : external
+
+* Geometric parameters for Fitness Function (from parameter file)               
+  Initial Virtual pt dist max              :   3.000
+  Final Virtual pt dist max                :   2.000
+  Virtual point distance min               :   0.500
+  Virtual point angle min                  :  60.000
+  Virtual point angle max                  : 160.000
+  Cone virtual point angle min             : 120.000
+  Cone virtual point angle max             : 160.000
+  Contact distance                         :  10.000
+  D/A vdw contact weighting                :   1.000
+  Minimum neighbour weighting              :   0.200
+  Mapping second pass distance             :   2.000
+
+* Lone pair parameters                                                          
+  Planar LP: minimum angle with plane      :  20.000
+  Planar LP: maximum angle with plane      :  90.000
+  Protein planar acceptors                 : need only one lp solvated
+  Solvated point distance                  :  -0.200
+
+* VDW parameters                                                                
+  Border round vdw grid                    :   4.000
+  VDW cutoff fraction                      :   1.500
+  VDW cutoff distance                      :  20.000
+  Number of bins in VDW lookup             :  10000
+
+* Specific metal-coordination types                                             
+
+* Other settings                                                                
+  Write statistics                         : off
+  Current parameters file                  :
+  /home/hitesit/CCDC/Discovery_2022/GOLD/gold/gold.params                       
+--------------------------------------------------------------------------------
+
+Processing protein 1: /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb 	DE(Protein): 0.00
+
+--------------------------------------------------------------------------------
+--- Loading protein                                                          ---
+--------------------------------------------------------------------------------
+  Protein file                             : /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb
+==================================
+APPLYING GOLD TEMPLATES TO PROTEIN
+==================================
+
+No templates identified from 
+
+==================================
+# WARNING: atom  369 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  528 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  657 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom  725 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1135 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1211 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1216 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1322 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 1393 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 1403 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 1937 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2255 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2493 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2526 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2532 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2658 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2724 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2829 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 2876 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3228 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3277 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3376 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 3864 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4134 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4225 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4327 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4548 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 4730 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5086 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5142 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5276 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5450 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom no 5456 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as N.pl3
+           but this may be in error (check bond types of connections)
+# WARNING: atom 5457 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as a singly charged oxygen
+# WARNING: atom 5518 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5632 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6309 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6438 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6574 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6593 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6733 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 6959 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7156 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7330 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7691 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 7976 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 8220 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as an acidic nitrogen
+# WARNING: atom 5457 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as a singly charged oxygen
+  N.plc donors                             : 
+  arg:  137 arg:  139 arg:  140 arg:  242 arg:  244 arg:  245 
+  arg:  299 arg:  301 arg:  302 arg:  431 arg:  433 
+  arg:  434 arg: 1296 arg: 1298 arg: 1299 arg: 1850 
+  arg: 1852 arg: 1853 arg: 3079 arg: 3081 arg: 3082 
+  arg: 4033 arg: 4035 arg: 4036 arg: 4110 arg: 4112 
+  arg: 4113 arg: 4162 arg: 4164 arg: 4165 arg: 4186 
+  arg: 4188 arg: 4189 arg: 4262 arg: 4264 arg: 4265 
+  arg: 4523 arg: 4525 arg: 4526 arg: 5608 arg: 5610 
+  arg: 5611 arg: 5847 arg: 5849 arg: 5850 arg: 7238 
+  arg: 7240 arg: 7241 arg: 7337 arg: 7339 arg: 7340 
+  arg: 7721 arg: 7723 arg: 7724 arg: 8045 arg: 8047 
+  arg: 8048 arg: 8181 arg: 8183 arg: 8184 arg: 10052 
+  arg: 10054 arg: 10055 arg: 10383 arg: 10385 arg: 10386 
+  arg: 10616 arg: 10618 arg: 10619 arg: 11063 arg: 11065 
+  arg: 11066 arg: 11160 arg: 11162 arg: 11163 arg: 11900 
+  arg: 11902 arg: 11903 arg: 11980 arg: 11982 arg: 11983 
+  
+
+  Acidic nitrogen acceptors                : 
+
+  369  528  657  725  1135 
+  1211 1216 1322 1393 1937 
+  2255 2493 2526 2532 2658 
+  2724 2829 2876 3228 3277 
+  3376 3864 4134 4225 4327 
+  4548 4730 5086 5142 5276 
+  5450 5518 5632 6309 6438 
+  6574 6593 6733 6959 7156 
+  7330 7691 7976 8220 
+
+--------------------------------------------------------------------------------
+--- Active site                                                              ---
+--------------------------------------------------------------------------------
+  Reading active site residues list from   : /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/cavity.residues
+  Cavity residues:                         : 
+ R:LYS249 R:VAL254 A:ASP337 A:LYS192 R:GLY168 R:LYS253 A:PHE336 A:THR340 R:THR163 R:ALA165
+ R:VAL166 R:TRP167 R:SER250 A:ASP341 A:ILE344 R:LYS246 R:MET164
+  Number of active residues                :     17
+
+* Cavity atoms                                                                  
+  11997 11998 11999 12000 12001 12002 12003 12004 12005 12006 
+  12007 12008 12009 12010 12011 12012 12013 12014 12015 12016 
+  12017 12018 12077 12078 12079 12080 12081 12082 12083 12084 
+  12085 12086 12087 12088 12089 12090 12091 12092 3522  3523  
+  3524  3525  3526  3527  3528  3529  3530  3531  3532  3533  
+  995   996   997   998   999   1000  1001  1002  1003  1004  
+  1005  1006  1007  1008  1009  1010  1011  1012  1013  1014  
+  1015  1016  10811 10812 10813 10814 10815 10816 10817 12055 
+  12056 12057 12058 12059 12060 12061 12062 12063 12064 12065 
+  12066 12067 12068 12069 12070 12071 12072 12073 12074 12075 
+  12076 3502  3503  3504  3505  3506  3507  3508  3509  3510  
+  3511  3512  3513  3514  3515  3516  3517  3518  3519  3520  
+  3521  3560  3561  3562  3563  3564  3565  3566  3567  3568  
+  3569  3570  3571  3572  3573  10737 10738 10739 10740 10741 
+  10742 10743 10744 10745 10746 10747 10748 10749 10750 10761 
+  10762 10763 10764 10765 10766 10767 10768 10769 10770 10771 
+  10772 10773 10774 10775 10776 10777 10778 10779 10780 10781 
+  10782 10783 10784 10785 10786 10787 10788 10789 10790 10791 
+  10792 10793 10794 10795 10796 10797 10798 10799 10800 10801 
+  10802 10803 10804 10805 10806 10807 10808 10809 10810 12019 
+  12020 12021 12022 12023 12024 12025 12026 12027 12028 12029 
+  3574  3575  3576  3577  3578  3579  3580  3581  3582  3583  
+  3584  3585  3621  3622  3623  3624  3625  3626  3627  3628  
+  3629  3630  3631  3632  3633  3634  3635  3636  3637  3638  
+  3639  11951 11952 11953 11954 11955 11956 11957 11958 11959 
+  11960 11961 11962 11963 11964 11965 11966 11967 11968 11969 
+  11970 11971 11972 10751 10752 10753 10754 10755 10756 10757 
+  10758 10759 10760 
+  Number of active atoms                   :    273
+  Calculated cavity radius                 :  22.049
+  Calculated cavity origin                 : 138.61 145.76 134.81
+
+  Ligsite cavity detection, MIN_PSP        :      4
+
+* Buried lysines                                                                
+  Lysine 11959 is fixed by an hbond (acceptor atno 3099 hbond angle 26.1)
+  Donor 12005 is in a solvent exposed residue
+
+--------------------------------------------------------------------------------
+--- Fitting points summary                                                   ---
+--------------------------------------------------------------------------------
+  Protein donor atoms                      :     25
+  11997 12005 12077 3522 995  1003 10811 12055 12063 3502 
+  3560 3566 10737 10743 10761 10771 10787 10797 12019 12024 
+  3574 3621 11951 11959 10751 
+
+  Protein acceptor atoms                   :     24
+  12000 12080 3525 3528 3529 998  10814 12058 3505 3563 
+  3566 10740 10743 10764 10774 10790 12022 12024 3577 3580 
+  3581 3624 11954 10754 
+
+  Hydrogens                                :  (n = 33)
+  12006 12016 12017 12018 12084 3530 1011 1008 1009 1010 
+  10815 12064 12074 12075 12076 3513 3572 3571 10744 10750 
+  10766 10778 10810 10806 12025 12029 3582 3629 11960 11970 
+  11971 11972 10756 
+
+  Lone pairs added to molecule             :     48
+  Numbering                                : from 12988 to 13035
+
+  Protein TRP residues                     : 
+  none found in active site
+
+  Protein rotatable bonds                  : 
+  [11997 11998] [12005 12004] [1003 1002] [12063 12062] 
+  [3566 3564] [10743 10741] [12024 12023] [11951 11952] 
+
+
+--------------------------------------------------------------------------------
+--- Shape grid                                                               ---
+--------------------------------------------------------------------------------
+  Maximum length of gridpt list            :    128
+  Average list length                      :     64
+
+--------------------------------------------------------------------------------
+--- Receptor Density Scaling                                                 ---
+--------------------------------------------------------------------------------
+  Minimum Protein Density                  :      0
+  Maximum Protein Density                  :    128
+Receptor density scaling is OFF
+
+
+  Length of shape fitting list             :      0
+
+--------------------------------------------------------------------------------
+--- Interaction Motif                                                        ---
+--------------------------------------------------------------------------------
+  Number of interactions                   :      0
+  Number of motifs                         :      0
+  Weight                                   :  50.000
+  Minimum Include Score                    : 0.000001
+  Ignore Zero Bits?                        :      0
+
+
+* Generating PLP maps for types                                                 
+  DONOR   ACCEPTOR   DONACC   NONPOLAR 
+
+--------------------------------------------------------------------------------
+
+* Protein initialisation time :                                                 
+  total  4.2680 user  3.8105 sys  0.4576
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+--- Active Molecule Summary                                                  ---
+--------------------------------------------------------------------------------
+

@@ -1,0 +1,21 @@
+Warning message: 
+set_pdb_bond_to_ar: can't find bond between 1391 and 1392
+
+Warning message: 
+set_pdb_bond_to_ar: can't find bond between 1394 and 1396
+
+Warning message: 
+atom no  280 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4g3y_cavity/4g3y_cavity_clean.pdb is deduced as N.pl3 but this may be
+in error (check bond types of connections)
+
+Warning message: 
+atom no 2230 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4g3y_cavity/4g3y_cavity_clean.pdb is deduced as N.pl3 but this may be
+in error (check bond types of connections)
+
+Warning message: 
+atom no 5627 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4g3y_cavity/4g3y_cavity_clean.pdb is deduced as N.pl3 but this may be
+in error (check bond types of connections)
+
+Warning message: 
+set_pdb_atom_types: can't deduce type of atom 1397 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/4g3y_cavity/4g3y_cavity_clean.pdb, replacing by Du
+

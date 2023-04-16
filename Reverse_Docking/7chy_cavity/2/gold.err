@@ -1,0 +1,15 @@
+Warning message: 
+atom no   17 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7chy_cavity/7chy_cavity_clean.pdb is deduced as N.pl3 but this may be
+in error (check bond types of connections)
+
+Warning message: 
+atom no 3170 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7chy_cavity/7chy_cavity_clean.pdb is deduced as N.pl3 but this may be
+in error (check bond types of connections)
+
+Warning message: 
+atom no 4161 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7chy_cavity/7chy_cavity_clean.pdb is deduced as N.pl3 but this may be
+in error (check bond types of connections)
+
+Fatal error: 
+add_residue_atoms_to_active_atoms: Cannot find the specified active residue 'L:GLY66' in the protein substructures list
+

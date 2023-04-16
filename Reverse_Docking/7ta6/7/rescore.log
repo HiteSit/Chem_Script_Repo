@@ -1,0 +1,13 @@
+Molecule file: rescore.log
+
+Status Simplex RMSd      Score     S(PLP)   S(hbond)     S(cho)   S(metal)  DE(clash)   DE(tors)     intcor   Ligand identifier
+Ok     1       0.34      26.39     -26.43       0.00       0.00       0.00       0.00       0.02       ----   CT1002167954|ligand_prepared|mol2|1|dock1
+Ok     1       0.37      24.74     -26.74       0.00       0.00       0.00       0.00       1.00       ----   CT1002167954|ligand_prepared|mol2|1|dock2
+Ok     1       0.61      27.17     -27.06       0.79       0.00       0.00       0.00       1.13       ----   CT1002167954|ligand_prepared|mol2|1|dock3
+Ok     1       0.37      24.02     -26.23       0.00       0.00       0.00       0.00       1.11       ----   CT1002167954|ligand_prepared|mol2|1|dock4
+Ok     1       1.00      22.07     -23.70       0.00       0.00       0.00       0.58       0.53       ----   CT1002167954|ligand_prepared|mol2|1|dock5
+Ok     1       0.47      24.93     -25.64       0.00       0.00       0.00       0.00       0.36       ----   CT1002167954|ligand_prepared|mol2|1|dock6
+Ok     1       0.69      26.31     -26.35       0.00       0.00       0.00       0.00       0.02       ----   CT1002167954|ligand_prepared|mol2|1|dock7
+Ok     1       0.67      23.15     -25.20       0.00       0.00       0.00       0.02       1.02       ----   CT1002167954|ligand_prepared|mol2|1|dock8
+Ok     1       0.43      21.75     -23.04       0.31       0.00       0.00       1.77       0.23       ----   CT1002167954|ligand_prepared|mol2|1|dock9
+Ok     1       0.42      27.12     -26.42       1.00       0.00       0.00       0.00       1.15       ----   CT1002167954|ligand_prepared|mol2|1|dock10

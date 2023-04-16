@@ -1,0 +1,458 @@
+
+--------------------------------------------------------------------------------
+--- GOLD DOCKING RUN  (GOLD v2022.3.0)                                       ---
+--------------------------------------------------------------------------------
+
+GOLD is Genetic Optimisation for Ligand Docking.
+
+GOLD is the result of a collaborative project between Sheffield University,
+the CCDC and Glaxo Wellcome. GOLD is a proprietary product for which the
+copyright is held by the Cambridge Crystallographic Data Centre (CCDC)
+
+Please forward any comments, bugs, or queries to CCDC Software Support:
+
+  Cambridge Crystallographic Data Centre
+  12 Union Road
+  Cambridge CB2 1EZ
+  tel: (44) (1223) 336022
+  email: support@ccdc.cam.ac.uk
+
+--------------------------------------------------------------------------------
+
+  User                                     : hitesit
+  Invocation Time                          : Sun Apr 16 02:21:02 2023
+
+
+--------------------------------------------------------------------------------
+--- Parameter setting overview (user-defined or automatic)                   ---
+--------------------------------------------------------------------------------
+  maxops                          automatic setting
+  popsiz                          automatic setting
+  select_pressure                 automatic setting
+  n_islands                       automatic setting
+  niche_siz                       automatic setting
+  pt_crosswt                      automatic setting
+  allele_mutatewt                 automatic setting
+  migratewt                       automatic setting
+  start_vdw_linear_cutoff         defined by user
+  initial_virtual_pt_match_max    defined by user
+
+--------------------------------------------------------------------------------
+--- ChemScore parameters                                                     ---
+--------------------------------------------------------------------------------
+
+* ChemScore coefficients                                                        
+  ZERO_COEFFICIENT                         :  -5.480
+  HBOND_COEFFICIENT                        :  -3.000
+  INTERNAL_HBOND_COEFFICIENT               :  -3.340
+  METAL_COEFFICIENT                        :  -6.000
+  LIPO_COEFFICIENT                         :  -0.117
+  ROT_COEFFICIENT                          :   2.560
+  INTRA_COEFFICIENT                        :   1.000
+  LINK_BEND_COEFFICIENT                    :   0.250
+  PROTEIN_ENERGY_COEFFICIENT               :   1.000
+  CHARGED_HBOND_SCALING                    :   2.000
+  CHARGED_METAL_SCALING                    :   2.000
+
+* Hydrogen-bond term                                                            
+  HBOND_FUNCTION                           : CHEMSCORE_DOCKING
+  R_IDEAL                                  :   1.850
+  DELTA_R_IDEAL                            :   0.250
+  DELTA_R_MAX                              :   0.650
+  HBOND_R_SIGMA                            :   0.000
+  ALPHA_IDEAL                              : 180.000
+  DELTA_ALPHA_IDEAL                        :  30.000
+  DELTA_ALPHA_MAX                          :  80.000
+  HBOND_ALPHA_SIGMA                        :   0.000
+  BETA_IDEAL                               : 180.000
+  DELTA_BETA_IDEAL                         :  80.000
+  DELTA_BETA_MAX                           : 100.000
+  HBOND_BETA_SIGMA                         :   0.000
+USE_HBOND_STRENGTHS = OFF
+
+  CH...O term                              : SPECIAL
+  CHO_COEFFICIENT       (kJ/mol)           :  -3.000
+  CHO_CLASH_RADIUS      (Angstrom)         :   2.400
+  CHO_R_IDEAL           (Angstrom)         :   2.350
+  CHO_DELTA_R_IDEAL     (Angstrom)         :   0.250
+  CHO_DELTA_R_MAX       (Angstrom)         :   0.650
+  CHO_ALPHA_IDEAL       (degrees)          : 180.000
+  CHO_DELTA_ALPHA_IDEAL (degrees)          :  50.000
+  CHO_DELTA_ALPHA_MAX   (degrees)          : 100.000
+  CHO_BETA_IDEAL        (degrees)          : 180.000
+  CHO_DELTA_BETA_IDEAL  (degrees)          :  80.000
+  CHO_DELTA_BETA_MAX    (degrees)          : 100.000
+
+Sulfur...acceptor term: 
+
+
+* Metal term                                                                    
+  METAL_R1                                 :   2.600
+  METAL_R2                                 :   3.000
+  METAL_R_SIGMA                            :   0.100
+
+* Specific metal-coordination types                                             
+
+
+* Lipophilic term                                                               
+  MAKE_PLANAR_N_LIPO                       :      0
+  LIPO_R1                                  :   4.100
+  LIPO_R2                                  :   7.100
+  LIPO_R_SIGMA                             :   0.100
+
+
+* Clash term                                                                    
+  CLASH_FUNCTION                           : CHEMSCORE_DOCKING
+  CLASH_RADIUS_GENERAL                     :   3.100
+  CLASH_RADIUS_SULPHUR                     :   3.350
+  CLASH_RADIUS_HBOND                       :   1.600
+  CLASH_RADIUS_METAL                       :   1.380
+  CLASH_RADIUS_SIGMA                       :   0.000
+
+
+* Torsion term                                                                  
+  SP3_SP3_BOND         A =  0.18750 (kJ/mol); n = 3.0; f0 =  3.14159 (rad)
+  SP3_SP2_BOND         A =  0.09375 (kJ/mol); n = 6.0; f0 =  0.00000 (rad)
+  SP2_SP2_BOND         A =  0.18750 (kJ/mol); n = 2.0; f0 =  0.00000 (rad)
+  UNKNOWN_BOND         A =  0.00000 (kJ/mol); n = 0.0; f0 =  0.00000 (rad)
+  EXOCYCLIC_BOND       A =  0.50000 (kJ/mol); n = 1.0; f0 =  3.14159 (rad)
+USE_EXOCYCLIC_TORSION_TERM = 1
+
+
+* Scaling                                                                       
+  HBOND_SCALING                            :      0
+  HBOND_SCALING_SAMPLES                    :      1
+  HBOND_SCALING_END                        :  75.000
+  DELTA_R_MAX_START                        :   1.150
+  DELTA_ALPHA_MAX_START (deg)              : 110.000
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+--- CHEMPLP parameters                                                       ---
+--------------------------------------------------------------------------------
+
+  PLP_COEFFICIENT                          :   1.000
+  PLP_LIGAND_CLASH_COEFFICIENT             :   1.000
+  PLP_LIGAND_TORSION_COEFFICIENT           :   2.000
+  PLP_PROTEIN_ENERGY_COEFFICIENT           :   1.000
+  PLP_CONSTRAINT_COEFFICIENT               :   1.000
+  PLP_GRID_SPACING                         :   0.300
+
+  PLP_LIGAND_TORSION_FUNCTION              : CHEMSCORE
+  PLP_LIGAND_CLASH_FUNCTION                : PLP
+  PLP_HBOND_METAL_FUNCTION                 : CHEMSCORE
+
+  PLP_WATER_BARRIER                        :   3.000
+
+  HBOND_A                                  :   2.300
+  HBOND_B                                  :   2.600
+  HBOND_C                                  :   3.100
+  HBOND_D                                  :   3.400
+  HBOND_E                                  :  -1.000
+  HBOND_F                                  :  20.000
+
+  BURIED_A                                 :   3.400
+  BURIED_B                                 :   3.600
+  BURIED_C                                 :   4.500
+  BURIED_D                                 :   5.500
+  BURIED_E                                 :  -0.100
+  BURIED_F                                 :  20.000
+
+  METAL_A                                  :   1.400
+  METAL_B                                  :   2.200
+  METAL_C                                  :   2.600
+  METAL_D                                  :   2.800
+  METAL_E                                  :  -1.000
+  METAL_F                                  :  20.000
+
+  NONPOLAR_A                               :   3.400
+  NONPOLAR_B                               :   3.600
+  NONPOLAR_C                               :   4.500
+  NONPOLAR_D                               :   5.500
+  NONPOLAR_E                               :  -0.400
+  NONPOLAR_F                               :  20.000
+
+  REPULSIVE_A                              :   3.200
+  REPULSIVE_B                              :   5.000
+  REPULSIVE_C                              :   0.100
+  REPULSIVE_D                              :  20.000
+
+
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+--- Parameter settings                                                       ---
+--------------------------------------------------------------------------------
+
+* Population settings                                                           
+  maxops                                   : auto   
+  popsiz                                   : auto   
+  select_pressure                          : auto   
+  n_islands                                : auto   
+  niche_siz                                : auto   
+
+* GA settings                                                                   
+  pt_crosswt                               : auto   
+  allele_mutatewt                          : auto   
+  migratewt                                : auto   
+
+* Search settings                                                               
+  start_vdw_linear_cutoff                  :   6.000
+  initial_virtual_pt_match_max             :   3.000
+
+* Cavity detection                                                              
+  Cavity detection algorithm               : Ligsite
+
+* Solvent Accessibility                                                         
+  Solvate all H bond donors and acceptors  : on
+
+* Ligand treatment                                                              
+  Internal ligand hydrogen bonds           : ignored
+  Flexible ligand ring corners             : fixed
+  Ligand carboxylic OH groups              : flip
+  Ligand amide bonds                       : fixed
+  Ligand pyramidal nitrogen groups         : fixed
+  Ligand bond to planar nitrogen groups    : allow 180 degrees flip
+  Ligand planar nitrogen bonds (Ring-NH-R) : can flip
+  Ligand planar nitrogen bonds (Ring-NRR') : can flip
+  Flatten amide and trigonal nitrogens     : yes
+  Torsional distributions                  : are used
+  Calculating torsional energy of ligand   : yes
+  Ligand energy                            : relative wrt best tors+vdw+hbond
+                                           : reported fitness is adjusted
+  Post-process ligand bonds                : yes
+
+* Protein treatment:                                                            
+  Protein carboxylic OH groups             : flip
+
+* Algorithm Settings (from parameter file):                                     
+  VDW potential (external)                 : 4-8       LJ potential (no. 1)
+  VDW potential (external)                 : 4-8 2-4 split potential (no. 2)
+  VDW potential (external)                 : 4-8 1-2 split potential (no. 3)
+  VDW potential (internal)                 : 6-12       LJ potential (no. 1)
+  VDW potential (internal)                 : 4-8       LJ potential (no. 2)
+  VDW potential (internal)                 : slot 3 not used
+  Weighting for distance matching          : squared
+  Weighting for angle    matching          : squared
+  Mapping, second pass results             : taking best three
+  Internal energy                          : on absolute scale
+  External energy weight                   :   1.375
+  Internal energy weight                   :   1.000
+  Length of H bond                         :   2.900
+  Angle coding                             : binary coded
+  Angle bit length                         : 8 bits
+  Allow duplicates in chromosome mappings  : yes
+  Parameter scaling                        : on
+  Simplex minimisation after every GA run  : yes
+  Infer hetatm types from residue names    : yes
+  Ligand relaxation                        : on
+    Maximum relax distance                 :   2.000
+    Maximum relax angle                    :  60.000
+  Ionisation dispersion term               : external
+
+* Geometric parameters for Fitness Function (from parameter file)               
+  Initial Virtual pt dist max              :   3.000
+  Final Virtual pt dist max                :   2.000
+  Virtual point distance min               :   0.500
+  Virtual point angle min                  :  60.000
+  Virtual point angle max                  : 160.000
+  Cone virtual point angle min             : 120.000
+  Cone virtual point angle max             : 160.000
+  Contact distance                         :  10.000
+  D/A vdw contact weighting                :   1.000
+  Minimum neighbour weighting              :   0.200
+  Mapping second pass distance             :   2.000
+
+* Lone pair parameters                                                          
+  Planar LP: minimum angle with plane      :  20.000
+  Planar LP: maximum angle with plane      :  90.000
+  Protein planar acceptors                 : need only one lp solvated
+  Solvated point distance                  :  -0.200
+
+* VDW parameters                                                                
+  Border round vdw grid                    :   4.000
+  VDW cutoff fraction                      :   1.500
+  VDW cutoff distance                      :  20.000
+  Number of bins in VDW lookup             :  10000
+
+* Specific metal-coordination types                                             
+
+* Other settings                                                                
+  Write statistics                         : off
+  Current parameters file                  :
+  /home/hitesit/CCDC/Discovery_2022/GOLD/gold/gold.params                       
+--------------------------------------------------------------------------------
+
+Processing protein 1: /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/3fmm/3fmm_clean.pdb 	DE(Protein): 0.00
+
+--------------------------------------------------------------------------------
+--- Loading protein                                                          ---
+--------------------------------------------------------------------------------
+  Protein file                             : /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/3fmm/3fmm_clean.pdb
+==================================
+APPLYING GOLD TEMPLATES TO PROTEIN
+==================================
+
+No templates identified from 
+
+==================================
+  N.plc donors                             : 
+  arg:   24 arg:   26 arg:   27 arg:  117 arg:  119 arg:  120 
+  arg:  345 arg:  347 arg:  348 arg:  710 arg:  712 
+  arg:  713 arg:  850 arg:  852 arg:  853 arg: 1023 
+  arg: 1025 arg: 1026 arg: 1082 arg: 1084 arg: 1085 
+  arg: 1140 arg: 1142 arg: 1143 arg: 1492 arg: 1494 
+  arg: 1495 arg: 2185 arg: 2187 arg: 2188 arg: 2402 
+  arg: 2404 arg: 2405 arg: 2921 arg: 2923 arg: 2924 
+  arg: 2990 arg: 2992 arg: 2993 arg: 3482 arg: 3484 
+  arg: 3485 arg: 3769 arg: 3771 arg: 3772 arg: 4054 
+  arg: 4056 arg: 4057 arg: 4698 arg: 4700 arg: 4701 
+  arg: 5202 arg: 5204 arg: 5205 
+
+  Acidic nitrogen acceptors                : 
+  none found
+
+--------------------------------------------------------------------------------
+--- Active site                                                              ---
+--------------------------------------------------------------------------------
+  Deriving cavity from ligand file         : /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/3fmm/cavity_A_XI2361.mol2
+  Picking atoms within distance            :   8.000
+
+
+* Cavity atoms                                                                  
+  459   460   461   462   463   464   466   467   469   471   
+  472   473   474   475   478   479   480   501   502   504   
+  509   510   511   512   513   514   515   516   517   518   
+  519   520   521   522   523   524   525   526   527   528   
+  529   530   531   533   534   536   548   549   550   551   
+  552   553   554   555   556   557   558   559   560   561   
+  562   563   564   567   573   581   743   744   745   746   
+  747   748   749   750   751   752   753   756   767   773   
+  774   775   776   777   778   781   782   786   788   790   
+  1340  1341  1342  1346  1347  1348  1349  1351  1352  1353  
+  1691  1692  1697  1698  1699  1703  1704  1718  1719  1720  
+  1722  1723  1724  1727  1728  1729  1730  1731  1736  1737  
+  1738  1739  1740  1741  1742  1745  1747  1748  1749  1750  
+  1763  1764  1767  1771  1775  1777  1780  1781  1782  2489  
+  2506  2530  2531  2534  2535  2536  2537  2538  2539  2684  
+  2687  2688  2689  2690  2692  2693  2694  2695  2696  2697  
+  2698  2699  2700  2701  2708  2709  532   539   754   755   
+  769   770   779   780   783   784   785   787   789   1339  
+  1345  1350  1693  1694  1696  2702  2707  2710  729   768   
+  1107  1190  1193  1194  1336  1344  1655  1663  1673  1679  
+  1687  1688  1689  1690  1695  1700  1701  1702  1711  2683  
+  2685  566   728   730   734   741   1183  1357  1358  1654  
+  1672  1674  1705  1712  1713  1714  1721  1735  1743  1746  
+  2654  2658  584   1725  1726  1733  1734  1754  1755  1756  
+  1757  1758  1760  1761  1762  1766  2532  2547  1716  1753  
+  2648  2653  2657  576   705   706   727   731   1395  1706  
+  1708  1732  1744  1751  1752  2540  2646  2647  2649  2659  
+  2660  579   583   1759  2533  2542  2543  2566  468   575   
+  1772  1779  470   1765  1768  1769  1770  1776  2513  2514  
+  2541  465   476   1773  1774  1778  1791  1823  1826  477   
+  1783  1820  1821  2475  2487  2488  2493  2495  2497  2498  
+  2499  2500  2511  2512  2519  2520  2544  2548  2549  2553  
+  2645  2651  2691  446   447   458   481   487   491   580   
+  582   490   1825  436   451   482   492   496   499   500   
+  503   505   506   507   565   574   537   540   771   772   
+  807   1105  1181  1182  1189  1192  1653  1656  1658  1662  
+  1665  1667  1671  2703  2706  2711  791   823   824   1104  
+  1106  1112  1113  1186  1188  1191  1337  1354  1356  1367  
+  1370  1374  1375  1376  1652  1657  1659  1660  1661  1664  
+  1666  1670  1678  1177  1180  1185  1187  1335  1338  1343  
+  1355  1360  1361  1362  1388  1668  2667  2723  2724  2726  
+  2727  2728  1102  1176  1178  1179  1184  1359  1363  1365  
+  1366  1368  1369  1372  1373  1378  1379  1380  1402  1407  
+  1669  1675  1680  1681  1683  757   758   761   763   766   
+  828   1371  1391  1392  1399  1401  1419  1420  1633  1634  
+  1645  1676  1677  1682  1684  1685  1686  276   759   760   
+  762   764   765   808   1632  1646  266   267   270   538   
+  543   568   571   738   792   1120  1125  1127  1132  1364  
+  1377  1381  1382  1384  1385  1386  1389  1400  1403  1409  
+  1411  1412  1415  1417  1424  1425  1627  
+  Number of active atoms                   :    497
+  Calculated cavity radius                 :  14.024
+  Calculated cavity origin                 :  20.78   9.79  31.77
+
+  Ligsite cavity detection, MIN_PSP        :      4
+
+* Buried lysines                                                                
+  Lysine 777 is fixed by an hbond (acceptor atno 1107 hbond angle 30.8)
+
+--------------------------------------------------------------------------------
+--- Fitting points summary                                                   ---
+--------------------------------------------------------------------------------
+  Protein donor atoms                      :     46
+  474  509  520  530  548  564  743  753  777  1718 
+  1737 1771 2530 769  1693 2702 1687 1701 2683 1754 
+  1761 727  1708 2540 575  1783 2497 2511 458  481  
+  492  499  537  1671 791  1354 1652 1335 1361 1176 
+  1380 1399 1411 2642 486  2714 
+
+  Protein acceptor atoms                   :     48
+  461  502  512  520  533  551  567  746  756  1704 
+  1740 1764 1777 2489 2708 2709 1693 1107 1655 1690 
+  730  1357 1674 1721 1757 706  2533 2543 2514 1774 
+  1778 1823 477  2475 2500 2645 447  436  540  772  
+  1106 1338 2667 1102 1179 1402 1634 1364 
+
+  Hydrogens                                :  (n = 48)
+  478  526  523  536  556  573  748  767  784  785  
+  786  1735 1745 1779 2535 787  1700 2710 1694 1711 
+  2691 1758 1766 742  1716 2547 580  1791 2505 2519 
+  467  487  496  507  543  1678 807  1358 1660 1343 
+  1369 1184 1388 1407 1418 2651 491  2728 
+
+  Lone pairs added to molecule             :     96
+  Numbering                                : from 5578 to 5673
+
+  Protein TRP residues                     : 
+  none found in active site
+
+  Protein rotatable bonds                  : 
+  [ 520  519] [1693 1691] [ 486  485] 
+
+
+--------------------------------------------------------------------------------
+--- Shape grid                                                               ---
+--------------------------------------------------------------------------------
+  Maximum length of gridpt list            :    125
+  Average list length                      :     65
+
+--------------------------------------------------------------------------------
+--- Receptor Density Scaling                                                 ---
+--------------------------------------------------------------------------------
+  Minimum Protein Density                  :      0
+  Maximum Protein Density                  :    132
+Receptor density scaling is OFF
+
+
+  Length of shape fitting list             :  10555
+
+--------------------------------------------------------------------------------
+--- Interaction Motif                                                        ---
+--------------------------------------------------------------------------------
+  Number of interactions                   :      0
+  Number of motifs                         :      0
+  Weight                                   :  50.000
+  Minimum Include Score                    : 0.000001
+  Ignore Zero Bits?                        :      0
+
+
+* Generating PLP maps for types                                                 
+  DONOR   ACCEPTOR   DONACC   NONPOLAR 
+
+--------------------------------------------------------------------------------
+
+* Protein initialisation time :                                                 
+  total 10.5878 user  4.7122 sys  5.8756
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+--- Active Molecule Summary                                                  ---
+--------------------------------------------------------------------------------
+

@@ -1,0 +1,11 @@
+Warning message: 
+atom no 1403 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as N.pl3 but this may be
+in error (check bond types of connections)
+
+Warning message: 
+atom no 5456 in /mnt/c/Users/ricca/Desktop/Documents/1_Coding/1_Script_Github/Reverse_Docking_Explore_V3/7xmr_cavity/7xmr_cavity_clean.pdb is deduced as N.pl3 but this may be
+in error (check bond types of connections)
+
+Fatal error: 
+add_residue_atoms_to_active_atoms: Cannot find the specified active residue 'R:THR128' in the protein substructures list
+
