@@ -1,8 +1,0 @@
-# File containing a listing of the fitness of the top-ranked
-# individual for each ligand docked in GOLD.
-#
-# Format is:
-#
-#     Score     S(PLP)   S(hbond)     S(cho)   S(metal)  DE(clash)   DE(tors)     intcor RMS(heavy)     time                               File name                Ligand name
-
-     38.14     -40.00       0.00       0.00       0.00       0.00       1.86       1.85    5.559    3.813  '/mnt/e/1_Coding/1_Script_Github/Chem_Script_Repo/GOLD_Virtual_Screening/output/prep_cristal.mol2/gold_soln_prep_cristal_m1_5.mol2'                     'F:ID'
