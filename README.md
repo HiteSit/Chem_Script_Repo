@@ -1,7 +1,7 @@
 # Contents
-- [Dock_Score_AdGPU](https://github.com/HiteSit/Chem_Script_Repo/tree/master/Dock_Score_AdGPU): OLD
-- [Gold_Classic_Scaffold_Docking](https://github.com/HiteSit/Chem_Script_Repo/tree/master/Gold_Classic_Scaffold_Docking): OLD
-- [GOLD_Reverse_Docking](https://github.com/HiteSit/Chem_Script_Repo/tree/master/GOLD_Reverse_Docking): OLD
+- [Dock_Score_AdGPU](https://github.com/HiteSit/Chem_Script_Repo/tree/master/Dock_Score_AdGPU)
+- [Gold_Classic_Scaffold_Docking](https://github.com/HiteSit/Chem_Script_Repo/tree/master/GOLD_Classic_Scaffold)
+- [GOLD_Reverse_Docking](https://github.com/HiteSit/Chem_Script_Repo/tree/master/GOLD_Reverse_Docking)
 
 - [OpenMM_Tleap_PlainMD](https://github.com/HiteSit/Chem_Script_Repo/tree/master/OpenMM_Tleap_PlainMD)
 - [General_Utils](https://github.com/HiteSit/Chem_Script_Repo/tree/master/General_Utils)
@@ -32,5 +32,4 @@ from Fix_Protonate import prepare_small_mol, prepare_for_searching
 
 smile = "CC(=O)Oc1ccccc1C(=O)O"
 mol_prep_3d, smile_prep = prepare_small_mol(smile, gen_3d=True, ID="TMP", protonate=True)
-
 ```
