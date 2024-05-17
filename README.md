@@ -18,18 +18,23 @@ Finally, a standard molecular dynamics simulation is conducted at 300K.
 ## GeneralUtils/Fix_Protonate.py
 This Python library provides a set of tools for the preparation, protonation, and standardization of small molecules. It combines the functionality of several cheminformatics libraries, including RDKit, OpenEye, and DataMol, to facilitate molecular preprocessing for computational chemistry and molecular modeling tasks.
 
-## Features
-
+### Features
 - **Canonical SMILES Generation**: Generate canonical SMILES representations of molecules, with options for including isomeric and kekulized forms.
 - **Protonation**: Generate all possible protonation states (protomers) for a given molecule.
 - **Standardization**: Standardize molecular structures to ensure consistency in representation.
 - **3D Structure Generation**: Generate 3D coordinates for molecules, suitable for use in molecular dynamics or docking studies.
 - **Preprocessing for Searching**: Prepare molecules for database searching by standardizing and reionizing them.
 
-## Usage
+### Dependencies
+- `mamba install datamol`
+- `mamba install rdkit`
+- `mamba install -c openeye openeye-toolkits`
+
+### Usage
 ```python
 from Fix_Protonate import prepare_small_mol, prepare_for_searching
 
 smile = "CC(=O)Oc1ccccc1C(=O)O"
 mol_prep_3d, smile_prep = prepare_small_mol(smile, gen_3d=True, ID="TMP", protonate=True)
+>>> (rdkit.Chem.rdchem.Mol, 'CC(=O)Oc1ccccc1C(=O)O')
 ```

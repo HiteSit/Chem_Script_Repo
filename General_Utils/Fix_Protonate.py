@@ -1,22 +1,17 @@
-import sys
-
 import datamol as dm
-from openbabel import pybel
 
-import rdkit
 from rdkit import Chem
 from rdkit.Chem import AllChem
 
 from openeye import oechem
 from openeye import oequacpac
-from openeye import oeomega
 
 class Fix_and_Protonate:
     def __init__(self, in_smile):
         # Shutdown the OEChem error handler
         oechem.OEThrow.SetLevel(oechem.OEErrorLevel_Warning)
         
-        # Conver the smile to mol
+        # Convert the smile to mol
         mol = oechem.OEGraphMol()
         oechem.OESmilesToMol(mol, in_smile)
         
